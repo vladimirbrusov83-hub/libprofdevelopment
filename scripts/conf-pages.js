@@ -135,4 +135,41 @@ function loadPages(id) {
   }));
 }
 
-module.exports = { PAGES, MANIFEST, htmlToText, candidateLinks, norm, quoteHasDate, context, DEADLINE_TYPES, readManifest, pageDir, loadPages };
+// Public source links: decode &amp; left from raw href attributes and drop
+// tracking parameters (HubSpot, Google, utm) so the card links stay clean.
+function cleanUrl(u) {
+  try {
+    const x = new URL(String(u).replace(/&amp;/g, "&"));
+    for (const k of [...x.searchParams.keys()]) if (/^(__hs|_gl$|_ga|utm_|gclid$|fbclid$|mc_)/.test(k)) x.searchParams.delete(k);
+    return x.href.replace(/\?$/, "");
+  } catch { return null; }
+}
+
+// A quote as a card shows it: one line, table pipes as middots.
+function cleanQuote(q) {
+  return String(q).replace(/\s*\|\s*/g, " · ").replace(/\s+/g, " ").replace(/^[\s·]+|[\s·]+$/g, "").trim();
+}
+
+// Verified claims → the entry's `sources`, kept only where the quote still states
+// what the card shows (current start date, or a listed deadline's date).
+function sourcesFor(entry, claims, seen) {
+  const out = [];
+  for (const cl of claims || []) {
+    const url = cleanUrl(cl.url), quote = cleanQuote(cl.quote);
+    if (!url || !url.startsWith("https://") || quote.length > 300) continue;
+    let s = null;
+    if (cl.field === "dates" && quoteHasDate(quote, entry.dateSort)) s = { about: "dates", date: entry.dateSort };
+    else if (cl.date && (entry.deadlines || []).some(d => d.date === cl.date) && quoteHasDate(quote, cl.date)) s = { about: "deadline", date: cl.date };
+    if (s && !out.some(o => o.about === s.about && o.date === s.date)) out.push({ ...s, quote, url, seen });
+  }
+  return out;
+}
+
+// Drop sources that no longer back anything on the card (dates rolled, deadline gone).
+function pruneSources(entry) {
+  if (!entry.sources) return;
+  entry.sources = entry.sources.filter(s => s.about === "dates" ? s.date === entry.dateSort : (entry.deadlines || []).some(d => d.date === s.date));
+  if (!entry.sources.length) delete entry.sources;
+}
+
+module.exports = { cleanUrl, cleanQuote, sourcesFor, pruneSources, PAGES, MANIFEST, htmlToText, candidateLinks, norm, quoteHasDate, context, DEADLINE_TYPES, readManifest, pageDir, loadPages };

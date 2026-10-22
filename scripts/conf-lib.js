@@ -14,7 +14,7 @@ const HTML = process.env.CONF_HTML || path.join(__dirname, "..", "index.html");
 const KEYS = [
   "id", "name", "organizer", "dates", "dateSort", "dateEnd", "location",
   "format", "url", "urlVerified", "urlNote", "category", "aiFocus",
-  "international", "description", "deadline", "deadlines", "checked"
+  "international", "description", "deadline", "deadlines", "checked", "sources"
 ];
 
 const AI_FOCUS = ["ai100", "aibig", "aisig"];
@@ -39,7 +39,9 @@ function serialize(list) {
       .filter(k => c[k] !== undefined && c[k] !== null || k === "deadline")
       .map(k => {
         const v = k === "deadline" && c[k] == null ? null : c[k];
-        return `    ${k}: ${JSON.stringify(v)}`;
+        // "<" escaped: a scraped quote holding </script> or <!-- would end the
+        // inline script and blank the page, and eval() round-trips \u003c fine.
+        return `    ${k}: ${JSON.stringify(v).replace(/</g, "\\u003c")}`;
       });
     return "  {\n" + lines.join(",\n") + "\n  }";
   });
@@ -89,6 +91,16 @@ function validate(list) {
     }
     // `checked` = the day a refresh last loaded the organizer's site and confirmed the entry.
     if (c.checked !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(c.checked)) errs.push(`${at}: bad checked ${c.checked}`);
+    // `sources` = verbatim lines from the organizer's site behind the dates and
+    // deadlines ({ about: "dates"|"deadline", date, quote, url, seen }), shown on the card.
+    if (c.sources !== undefined) {
+      if (!Array.isArray(c.sources)) errs.push(`${at}: sources must be an array`);
+      else for (const s of c.sources) {
+        const ok = s && ["dates", "deadline"].includes(s.about) && /^\d{4}-\d{2}-\d{2}$/.test(s.date || "")
+          && /^\d{4}-\d{2}-\d{2}$/.test(s.seen || "") && s.quote && /^https:\/\//.test(s.url || "");
+        if (!ok) errs.push(`${at}: each source needs about (dates|deadline), date, seen, quote and an https url`);
+      }
+    }
     // Rolling an event forward means renaming it too — a card reading
     // "IFLA WLIC 2026" above 2027 dates is the easy mistake here.
     const yrs = (c.name || "").match(/20\d\d/g);

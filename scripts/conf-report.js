@@ -134,7 +134,12 @@ function approvedOps(data, picks) {
       set.deadlines = [...keep, ...dls].sort((a, b) => (a.date < b.date ? -1 : 1));
     }
     if (!Object.keys(set).length) continue;
-    out.push({ ...op, set });
+    // Quotes only for what was approved, or confirmed unchanged (no checkbox).
+    const has = gid => card.groups.some(g => g.gid === gid);
+    const claims = (op.claims || []).filter(cl =>
+      cl.field === "dates" ? chosen.has("edition") || !has("edition")
+      : cl.date ? chosen.has("dl:" + cl.date) || !has("dl:" + cl.date) : false);
+    out.push({ ...op, set, claims });
   }
   for (const q of data.quiet) if ((picks.quiet || []).includes(q.i)) out.push(data.ops[q.i]);
   for (const a of data.ai) if ((picks.ai || []).includes(a.id)) out.push({ id: a.id, set: { aiFocus: a.to } });

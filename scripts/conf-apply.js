@@ -20,6 +20,7 @@
 const fs = require("fs");
 const path = require("path");
 const { parse, validate, write, isHidden } = require("./conf-lib");
+const { sourcesFor, pruneSources } = require("./conf-pages");
 
 const STATE = path.join(__dirname, "conf-state.json");
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -54,10 +55,15 @@ const log = [];
 // entry's visible "Checked <date>" mark. blocked / not-found never do.
 const CONFIRMED = ["resolved", "no-future-edition"];
 
-function record(id, outcome, note) {
+function record(id, outcome, note, claims) {
   if (!outcome) return;
   const entry = byId.get(id) || list.find(c => c.id === id);
-  if (entry && CONFIRMED.includes(outcome)) entry.checked = TODAY;
+  if (entry && CONFIRMED.includes(outcome)) {
+    entry.checked = TODAY;
+    // Fresh quotes replace older ones for the same date; others stay (pruned below).
+    const fresh = sourcesFor(entry, claims, TODAY);
+    if (fresh.length) entry.sources = [...(entry.sources || []).filter(s => !fresh.some(f => f.about === s.about && f.date === s.date)), ...fresh];
+  }
   state.entries[String(id)] = {
     lastChecked: TODAY,
     outcome,
@@ -70,7 +76,7 @@ for (const op of ops) {
   if (op.add) {
     const entry = { id: nextId++, urlVerified: false, international: false, deadline: null, ...op.add };
     list.push(entry);
-    record(entry.id, op.outcome || "resolved", op.note);
+    record(entry.id, op.outcome || "resolved", op.note, op.claims);
     log.push(`add    #${entry.id} ${entry.name}`);
     continue;
   }
@@ -88,14 +94,14 @@ for (const op of ops) {
     Object.assign(target, op.set);
     // No outcome = a hand edit, not a site check: change the entry, leave its
     // "Checked" stamp and recheck schedule alone.
-    record(op.id, op.outcome, op.note);
+    record(op.id, op.outcome, op.note, op.claims);
     log.push(`update #${op.id} ${target.name}${changed.length ? " [" + changed.join(", ") + "]" : " (no change)"}`);
     continue;
   }
   // Outcome-only op: nothing to change on the page, but the check still counts
   // so the next run can skip this entry until its TTL expires.
   if (op.outcome) {
-    record(op.id, op.outcome, op.note);
+    record(op.id, op.outcome, op.note, op.claims);
     log.push(`note   #${op.id} ${target.name} — ${op.outcome}${op.note ? ": " + op.note : ""}`);
     continue;
   }
@@ -107,6 +113,8 @@ for (const op of ops) {
 // time, so array order is cosmetic — and re-sorting here would rewrite all ~150
 // entries on every run, turning each diff into something nobody can review.
 const final = list.filter(c => !dropped.has(c.id));
+// Every run, hand edits included: a source must still back what the card shows.
+final.forEach(pruneSources);
 
 const errs = validate(final);
 if (errs.length) { console.error("validation failed — nothing written:\n  " + errs.join("\n  ")); process.exit(1); }

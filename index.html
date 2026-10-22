@@ -197,6 +197,16 @@ button, input, select { font: inherit; color: inherit; }
 .card-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
 .chk { font-size: 12.5px; color: var(--green); font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
 .chk.unv { color: var(--muted); }
+.src-btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--navy); background: none; border: 0; padding: 2px 0; cursor: pointer; text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+.src-btn:hover { text-decoration-color: var(--navy); }
+.src-btn::after { content: " ▾"; font-size: 11px; }
+.src-btn[aria-expanded="true"]::after { content: " ▴"; }
+.srcs { flex-basis: 100%; background: #f7f8fa; border: 1px solid var(--line); border-radius: 3px; padding: 10px 12px; font-size: 13.5px; }
+.srcs ul { list-style: none; margin: 0; padding: 0; }
+.srcs li + li { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+.srcs b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; }
+.srcs q { color: var(--ink); overflow-wrap: anywhere; }
+.srcs small { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
 .btns { margin-left: auto; display: flex; gap: 8px; }
 .btn { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: 3px; border: 1px solid var(--line-2); background: #fff; color: var(--navy); cursor: pointer; transition: background-color .15s, border-color .15s; }
 .btn:hover { border-color: var(--navy-2); }
@@ -514,7 +524,8 @@ const CONFERENCES = [
     international: false,
     description: "Free virtual conference exclusively on generative AI in libraries — instruction, research support, collection management, outreach, and ethics.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-07","quote":"Our next conference is scheduled for June 7-10, 2027 .","url":"https://shsulibraryguides.org/genailibraries","seen":"2026-10-22"}]
   },
   {
     id: 2,
@@ -708,7 +719,8 @@ const CONFERENCES = [
     international: true,
     description: "90th IFLA World Congress. Theme: 'Libraries Powering Transformation.' Sessions on AI literacy, responsible AI in cataloguing, and AI for accessible collections.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-08-09","quote":"9-13 AUGUST 2027","url":"https://2027.ifla.org/","seen":"2026-10-22"}]
   },
   {
     id: 23,
@@ -744,7 +756,8 @@ const CONFERENCES = [
     international: false,
     description: "OR2027 returns to an in-person format, jointly hosted by UFBA, IBICT, UFG, UFPR and the Rede Brasileira de Repositórios Digitais. The venue is the Wish Hotel in Bahia, near Salvador's UNESCO-listed Historic Center.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-06","quote":"the conference will take place in Salvador, Brazil 6-10 of June 2027!","url":"https://or2026.openrepositories.org/","seen":"2026-10-22"}]
   },
   {
     id: 25,
@@ -832,7 +845,8 @@ const CONFERENCES = [
     description: "Springer-published conference on AI/ML in education technology — intelligent tutoring, human-AI hybrid systems, online learning, and educational inequity.",
     deadline: null,
     deadlines: [{"date":"2027-02-20","what":"Submission deadline"},{"date":"2027-04-10","what":"Registration deadline"},{"date":"2027-05-25","what":"Proposals due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-07-28","quote":"will be held in Cologne, Germany during July 28-July 30, 2027","url":"https://www.aiet.org/","seen":"2026-10-22"},{"about":"deadline","date":"2027-02-20","quote":"February 20 2027 Submission Deadline","url":"https://www.aiet.org/","seen":"2026-10-22"},{"about":"deadline","date":"2027-04-10","quote":"April 10 2027 Registration Deadline","url":"https://www.aiet.org/","seen":"2026-10-22"},{"about":"deadline","date":"2027-05-25","quote":"May 25 2027 Proposal for Tutorials Deadline","url":"https://www.aiet.org/","seen":"2026-10-22"}]
   },
   {
     id: 31,
@@ -851,7 +865,8 @@ const CONFERENCES = [
     description: "Premier learning analytics conference. 2026 theme: 'Learning Analytics and AI Synergy.' Explores AI+analytics in teaching, advising, and student success.",
     deadline: "Posters/demos due Nov 9, 2026; early-bird registration through Jan 15, 2027",
     deadlines: [{"date":"2026-10-22","what":"Practitioner submission deadline"},{"date":"2026-10-27","what":"AI Agents Academy submission deadline"},{"date":"2026-11-09","what":"Poster/Demo submission deadline"},{"date":"2026-12-04","what":"Papers due"},{"date":"2027-01-15","what":"Early-bird registration closes"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-03-08","quote":"LAK27 conference, Recife, Brazil · 8-12 March 2027","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-22","quote":"Practitioner Submission Deadline · 13 Oct 2026 22 Oct 2026","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-27","quote":"AI Agents Academy Submission Deadline · 13 Oct 2026 27 Oct 2026","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-09","quote":"Poster/Demo Submission Deadline · 9 Nov 2026","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"},{"about":"deadline","date":"2026-12-04","quote":"Submission Deadline for papers to individual workshops that issue calls** · 4 Dec 2026","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-15","quote":"Early-bird registration closes at 11:59 pm PST · 15 Jan 2027","url":"https://www.solaresearch.org/events/lak/lak27/general-call/","seen":"2026-10-22"}]
   },
   {
     id: 32,
@@ -923,7 +938,8 @@ const CONFERENCES = [
     international: false,
     description: "MLA '27, themed \"Elevating Impact\", gathers health information professionals to strengthen knowledge, expand networks and increase the value they bring to their organizations and communities.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-05-25","quote":"taking place May 25-28, 2027, in Denver, Colorado","url":"https://www.mlanet.org/article/join-us-for-the-mla-27-official-invitation/","seen":"2026-10-22"}]
   },
   {
     id: 36,
@@ -941,7 +957,8 @@ const CONFERENCES = [
     international: true,
     description: "DH2027, the annual Digital Humanities conference of the Alliance of Digital Humanities Organizations, will be hosted by the University of Galway. Further programme details are still to come.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-28","quote":"ADHO is thrilled to announce that DH2027 will be hosted by the University of Galway in Ireland, June 28-July 3, 2027.","url":"https://adho.org/2025/02/12/dh2027-is-in-galway/","seen":"2026-10-22"}]
   },
   {
     id: 37,
@@ -959,7 +976,8 @@ const CONFERENCES = [
     international: false,
     description: "Major K-12 and higher ed technology conference. AI Innovator Challenge, hands-on AI literacy workshops, 800+ sessions including multiple mainstage AI keynotes. Relevant for librarians supporting AI instruction.",
     deadline: "Registration not yet open",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-27","quote":"ISTELive 2027 · June 27-30, 2027 · Boston","url":"https://conference.iste.org/2027/","seen":"2026-10-22"}]
   },
   {
     id: 38,
@@ -995,7 +1013,8 @@ const CONFERENCES = [
     international: false,
     description: "23rd Open Education Conference. AI's impact on open educational resources is a primary thread — AI as threat vs. transformative tool for OER creation, adaptation, and discovery.",
     deadline: "Registration open",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-10-27","quote":"will be held on October 27-29, 2026 as a virtual event.","url":"https://www.opened.org/events/2026/2026-open-education-conference","seen":"2026-10-22"}]
   },
   {
     id: 40,
@@ -1014,7 +1033,8 @@ const CONFERENCES = [
     description: "Major cross-sector education innovation conference. Dedicated tracks on AI in education including 'Teaching on the Frontier: Skills for the AI Era' — how educators and students engage with AI thoughtfully and inclusively.",
     deadline: "Early registration discount through Oct 29, 2026",
     deadlines: [{"date":"2026-10-29","what":"Discounted rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-03-13","quote":"March 13–16, 2027 · Austin, TX","url":"https://sxswedu.com/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-29","quote":"Save $250 off the walk-up rate when you register by 11:59pm PT on October 29.","url":"https://sxswedu.com/","seen":"2026-10-22"}]
   },
   {
     id: 41,
@@ -1032,7 +1052,8 @@ const CONFERENCES = [
     international: false,
     description: "Premier conference for digital and online learning professionals. Includes a dedicated AI Summit focused on the impact, ethics, and research behind AI in higher education — moving beyond 'how to use it.'",
     deadline: "Registration open",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-16","quote":"Join us November 16–19, 2026, at the Walt Disney World Swan and Dolphin Resort in Orlando, Florida","url":"https://onlinelearningconsortium.org/conferences/olc-accelerate2026/","seen":"2026-10-22"}]
   },
   {
     id: 42,
@@ -1051,7 +1072,8 @@ const CONFERENCES = [
     description: "Annual gathering of faculty developers, instructional designers, and teaching center professionals. Theme: 'Building Resilience and Innovation in Transformative Learning Environments.' In person in Baltimore with select sessions live-streamed. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Early-bird registration through Oct 23, 2026",
     deadlines: [{"date":"2026-10-23","what":"Early-bird rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-18","quote":"November 18–20, 2026","url":"https://podnetwork.org/annual-conference/baltimore-2026/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-23","quote":"Early Bird Registration extended to October 23!","url":"https://podnetwork.org/annual-conference/baltimore-2026/","seen":"2026-10-22"}]
   },
   {
     id: 43,
@@ -1087,7 +1109,8 @@ const CONFERENCES = [
     international: false,
     description: "Largest in-person gathering of educational technology researchers and practitioners. AI programming covers human-AI collaboration in learning, AI-ready curricula design, and ethical AI in instructional systems.",
     deadline: "Late registration (since Oct 13, 2026)",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-03","quote":"Chicago, Illinois • November 3–7, 2026","url":"https://www.aect.org/events/convention","seen":"2026-10-22"}]
   },
   {
     id: 45,
@@ -1106,7 +1129,8 @@ const CONFERENCES = [
     description: "Annual conference for institutional research and data professionals. AI applications in enrollment analytics, student success prediction, and evidence-based institutional decision-making. 200+ crowd-sourced sessions.",
     deadline: null,
     deadlines: [{"date":"2027-04-16","what":"Presenter registration deadline"},{"date":"2027-05-17","what":"Papers due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-01","quote":"Denver, CO · June 1–4, 2027","url":"https://www.airweb.org/forum/2027/home","seen":"2026-10-22"},{"about":"deadline","date":"2027-04-16","quote":"April 16, 2027 Presenter registration deadline","url":"https://www.airweb.org/forum/2027/information/call-for-proposals","seen":"2026-10-22"},{"about":"deadline","date":"2027-05-17","quote":"must be uploaded via the presenter portal by May 17, 2027.","url":"https://www.airweb.org/forum/2027/information/call-for-proposals","seen":"2026-10-22"}]
   },
   {
     id: 46,
@@ -1126,7 +1150,8 @@ const CONFERENCES = [
     description: "A two-day live online conference from Library Journal, held on Zoom 12:00–4:30 pm ET each day, on practical uses of AI in academic libraries. Participants earn 10 professional development credit hours and keep access to recordings for six months.",
     deadline: "Standard rate; register by November 16, 2026",
     deadlines: [{"date":"2026-11-16","what":"Regular rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-16","quote":"Live online conference November 16-17, 12:00 pm - 4:30 pm ET","url":"https://course.libraryjournal.com/products/ai-and-academic-libraries-conference","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-16","quote":"Standard rate is $282 through November 16, 2026.","url":"https://course.libraryjournal.com/products/ai-and-academic-libraries-conference","seen":"2026-10-22"}]
   },
   {
     id: 47,
@@ -1177,7 +1202,8 @@ const CONFERENCES = [
     international: false,
     description: "Annual conference for California library professionals. Theme: 'Library Evolution.' AI ethics and technology tracks confirmed; relevant for academic and public librarians navigating AI integration.",
     deadline: "On-site registration Oct 22–24, 2026",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-10-22","quote":"Dates: Thursday, October 22, 2026 - Saturday October 24, 2026","url":"https://www.cla-conference.org/registration","seen":"2026-10-22"}]
   },
   {
     id: 53,
@@ -1196,7 +1222,8 @@ const CONFERENCES = [
     description: "4th annual conference bringing together K-12 and higher ed educators on AI in teaching and learning. Hands-on workshops, research presentations, and keynotes on human-centered AI in the classroom.",
     deadline: "Proposals due Jan 22, 2027; early bird ends Mar 5, 2027",
     deadlines: [{"date":"2027-01-22","what":"Proposals due"},{"date":"2027-03-05","what":"Early Bird ends"},{"date":"2027-04-09","what":"Registration closes"},{"date":"2027-05-17","what":"General registration ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-01","quote":"The 5th annual Teaching and Learning with AI Conference will be held June 1-3, 2027.","url":"https://aiforall.ucf.edu/teachwithai/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-22","quote":"The deadline to submit a proposal is 11:59p.m. EST on January 22, 2027.","url":"https://aiforall.ucf.edu/teachwithai/","seen":"2026-10-22"},{"about":"deadline","date":"2027-03-05","quote":"Early Bird: $700 (ends March 5, 2027)","url":"https://aiforall.ucf.edu/teachwithai/","seen":"2026-10-22"},{"about":"deadline","date":"2027-04-09","quote":"Presenters: $650 (must register by April 9, 2027)","url":"https://aiforall.ucf.edu/teachwithai/","seen":"2026-10-22"},{"about":"deadline","date":"2027-05-17","quote":"General Registration: $800 (ends May 17, 2027)","url":"https://aiforall.ucf.edu/teachwithai/","seen":"2026-10-22"}]
   },
   {
     id: 54,
@@ -1215,7 +1242,8 @@ const CONFERENCES = [
     description: "Dedicated conference on AI's implications for higher education — curriculum, academic integrity, equity, faculty development, and institutional strategy. Co-located with in-person and virtual tracks.",
     deadline: "Registration open (no deadline posted)",
     deadlines: [{"date":"2026-10-30","what":"Regular rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-10-28","quote":"October 28, 2026 Conference Begins October 30, 2026 Conference Ends","url":"https://www.aacu.org/event/conference-on-ai-and-higher-education","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-30","quote":"Regular Rate (September 24—October 30, 2026)","url":"https://www.aacu.org/conferences/conference-on-ai/rates","seen":"2026-10-22"}]
   },
   {
     id: 55,
@@ -1233,7 +1261,8 @@ const CONFERENCES = [
     international: false,
     description: "Free public virtual conference on AI in education. 2026 proposals closed August 17, 2026. Focus on practical applications, pedagogy, equity, and ethical AI use in higher education contexts.",
     deadline: "CFP closed Aug 17, 2026; registration open",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-12","quote":"Dates: November 12 - 13, 2026","url":"https://militaryplus.apus.edu/academic-community/conferences/ai-and-the-future-of-education/","seen":"2026-10-22"}]
   },
   {
     id: 57,
@@ -1323,7 +1352,8 @@ const CONFERENCES = [
     description: "Dedicated virtual conference on AI in education — tools, strategies, ethics, and pedagogy. On-demand access available through March 2027.",
     deadline: "Early pricing through Nov 20, 2026",
     deadlines: [{"date":"2026-11-20","what":"Discounted rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-12-01","quote":"Live: December 1-2, 2026","url":"https://www.magnapubs.com/ai-in-education-conference/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-20","quote":"Register by November 20th to get this special pricing.","url":"https://www.magnapubs.com/ai-in-education-conference/","seen":"2026-10-22"}]
   },
   {
     id: 64,
@@ -1360,7 +1390,8 @@ const CONFERENCES = [
     description: "Annual library technology and innovation conference. AI has been a central programming thread; 2027 continues that focus with five simultaneous tracks, workshops, and an exhibit hall.",
     deadline: "Register by Feb 12, 2027 for discount",
     deadlines: [{"date":"2027-02-12","what":"Discounted rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-03-16","quote":"Join us this March 16 to 18 in Arlington, VA","url":"https://computersinlibraries.infotoday.com/2027/default.aspx","seen":"2026-10-22"},{"about":"deadline","date":"2027-02-12","quote":"Register by February 12 & SAVE!","url":"https://computersinlibraries.infotoday.com/2027/default.aspx","seen":"2026-10-22"}]
   },
   {
     id: 66,
@@ -1505,7 +1536,8 @@ const CONFERENCES = [
     description: "Annual meeting of ASIS&T. 2026 theme: 'Crossing Boundaries: Advancing Global Dialogue and Well-being through Information Research and Practice.' A virtual satellite runs in December for remote attendees. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Registration open — advance rate through Oct 26, 2026",
     deadlines: [{"date":"2026-10-26","what":"Advance rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"deadline","date":"2026-10-26","quote":"ADVANCE By Oct 26","url":"https://www.asist.org/am2026/am26-reg-rates-and-policies/","seen":"2026-10-22"}]
   },
   {
     id: 74,
@@ -1541,7 +1573,8 @@ const CONFERENCES = [
     description: "Largest German-language library congress. Substantial AI and generative-AI programming track — a strong barometer for European AI practice in libraries.",
     deadline: "Call for papers closes December 7, 2026",
     deadlines: [{"date":"2026-12-07","what":"Proposals due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-22","quote":"22.-25.6.2027 in Nürnberg","url":"https://www.bib-info.de/berufsverband/aktuelles/artikel/ansicht/call-for-papers-zur-115-bibliocon-bibliocon27","seen":"2026-10-22"},{"about":"deadline","date":"2026-12-07","quote":"Der Call for Papers läuft vom 01.09. und endet am 07.12.2026.","url":"https://www.bib-info.de/berufsverband/aktuelles/artikel/ansicht/call-for-papers-zur-115-bibliocon-bibliocon27","seen":"2026-10-22"}]
   },
   {
     id: 77,
@@ -1649,7 +1682,8 @@ const CONFERENCES = [
     description: "Community-driven conference on electronic resources and emerging library technology. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Proposals through Oct 29, 2026; early-bird registration through Feb 1, 2027",
     deadlines: [{"date":"2026-10-29","what":"Proposals due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-03-21","quote":"March 21 – 24, 2027 // Austin, Texas + Online","url":"https://electroniclibrarian.org/conference-info/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-29","quote":"Call for Proposals Open: Aug 26 – Oct 29, 2026","url":"https://electroniclibrarian.org/program/","seen":"2026-10-22"}]
   },
   {
     id: 84,
@@ -1789,7 +1823,8 @@ const CONFERENCES = [
     international: false,
     description: "Midwestern state library association annual conference. Diverse audience of public, academic, and special librarians. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Not yet posted",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-10-06","quote":"We look forward to seeing everyone in Altoona on October 6-8, 2027.","url":"https://www.iowalibraryassociation.org/","seen":"2026-10-22"}]
   },
   {
     id: 92,
@@ -1826,7 +1861,8 @@ const CONFERENCES = [
     description: "Community-college-focused innovation conference with tracks on leadership, learning and teaching, student support, and workforce preparation. Presenters are typically affiliated with a community college or nonprofit university. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Call for proposals through October 30, 2026",
     deadlines: [{"date":"2026-10-30","what":"Proposals due"},{"date":"2027-01-15","what":"Discounted rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-03-14","quote":"This event takes place March 14-16, 2027, in Chandler, Arizona, at Gila River Resorts & Casinos – Wild Horse Pass.","url":"https://www.league.org/inn2027","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-30","quote":"THE CALL FOR PROPOSALS IS OPEN THROUGH OCTOBER 30.","url":"https://www.league.org/inn2027/call-for-proposals","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-15","quote":"Register by January 15 to save.","url":"https://www.league.org/inn2027/registration","seen":"2026-10-22"}]
   },
   {
     id: 94,
@@ -1862,7 +1898,8 @@ const CONFERENCES = [
     description: "The leading conference for library information literacy instruction. LOEX 2027 is online.",
     deadline: "Breakout session proposals due November 30, 2026",
     deadlines: [{"date":"2026-11-30","what":"Proposals due"},{"date":"2027-01-18","what":"Lightning Talk proposals due"},{"date":"2027-01-25","what":"Poster proposals due"},{"date":"2027-05-07","what":"Papers due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-05-11","quote":"May 11-14, Online","url":"https://loexconference.org/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-30","quote":"Monday, November 30, 2026: Deadline to submit proposals","url":"https://loexconference.org/proposals/breakout-proposals/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-18","quote":"Lightning Talk proposals due date is Monday, January 18, 2027.","url":"https://loexconference.org/proposals/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-25","quote":"Poster Session proposals due date is in Monday, January 25, 2027.","url":"https://loexconference.org/proposals/","seen":"2026-10-22"},{"about":"deadline","date":"2027-05-07","quote":"Friday, May 7, 2027: Deadline for Presentation presenters to submit a paper (up to 2500 words) for inclusion in the Conference Proceedings","url":"https://loexconference.org/proposals/breakout-proposals/","seen":"2026-10-22"}]
   },
   {
     id: 97,
@@ -1985,7 +2022,8 @@ const CONFERENCES = [
     international: true,
     description: "14th Eurasian Academic Libraries Conference, hosted by Nazarbayev University Library with Kazakhstan's Ministry of Science & Higher Education. Focus on libraries' evolving roles in education, research, and society across the Eurasian region. Working languages Kazakh, Russian, and English.",
     deadline: "Registration closed (deadline Oct 1, 2026)",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-10-22","quote":"22-23 OCTOBER, ASTANA, KAZAKHSTAN","url":"https://library.nu.edu.kz/ealc","seen":"2026-10-22"}]
   },
   {
     id: 106,
@@ -2004,7 +2042,8 @@ const CONFERENCES = [
     description: "Regional academic conference on digital libraries, data science, and AI. Theme: \"Empowering Digital Knowledge Ecosystems through Data, AI, and Human Intelligence\" — AI is central to this year's program.",
     deadline: "Early registration through Oct 31, 2026",
     deadlines: [{"date":"2026-10-31","what":"Early-bird rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-12-02","quote":"2-4 December 2026 at Khon Kaen University, Thailand.","url":"https://icadl.net/icadl2026/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-31","quote":"Early Registration by 31 October 2026","url":"https://icadl.net/icadl2026/","seen":"2026-10-22"}]
   },
   {
     id: 107,
@@ -2041,7 +2080,8 @@ const CONFERENCES = [
     international: true,
     description: "ALA's only conference held outside the U.S. — an East–West bridge drawing 400+ attendees from 30+ countries across all library types. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Poster applications closed Oct 16; registration open",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-07","quote":"November 7-9 in Sharjah, UAE","url":"https://sharjahilc.com/","seen":"2026-10-22"}]
   },
   {
     id: 109,
@@ -2060,7 +2100,8 @@ const CONFERENCES = [
     description: "International conference for university and technological-university libraries, hosted by the University of Johannesburg. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Registration closes October 30, 2026",
     deadlines: [{"date":"2026-10-30","what":"Registration closes"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"deadline","date":"2026-10-30","quote":"Registration will close on the 30 October 2026. Take the chance to join us in Johannesburg!","url":"https://www.iatul.org/","seen":"2026-10-22"}]
   },
   {
     id: 110,
@@ -2079,7 +2120,8 @@ const CONFERENCES = [
     description: "National niche conference (running since 2009) on circulation, reserves, ILL/resource sharing, stacks, security, and student-worker management. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Registration open (opened July 15, 2026); 2026 CFP closed",
     deadlines: [{"date":"2026-11-01","what":"Registration closes"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-17","quote":"November 17–19, 2026","url":"https://www.accessservicesconference.org/conferences/2026-conference/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-01","quote":"Last Day for Virtual Registration November 1, 2026","url":"https://www.accessservicesconference.org/conferences/2026-conference/registration/","seen":"2026-10-22"}]
   },
   {
     id: 111,
@@ -2133,7 +2175,8 @@ const CONFERENCES = [
     description: "Largest state library-association conference in the U.S., with a large academic / college & university track alongside all library types. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Registration open",
     deadlines: [{"date":"2027-01-31","what":"Early-bird rate ends"},{"date":"2027-03-31","what":"Regular rate ends"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-04-19","quote":"April 19-22, 2027 at the Henry B. Gonzalez Convention Center in San Antonio, Texas","url":"https://conference.txla.org/registration/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-31","quote":"Early Bird October 1, 2026 – January 31, 2027","url":"https://conference.txla.org/registration/rates/","seen":"2026-10-22"},{"about":"deadline","date":"2027-03-31","quote":"Standard February 1 – March 31, 2027","url":"https://conference.txla.org/registration/rates/","seen":"2026-10-22"}]
   },
   {
     id: 114,
@@ -2241,7 +2284,8 @@ const CONFERENCES = [
     description: "International niche forum on library publishing, open access, and scholarly communication. Included for professional-development completeness; AI programming varies by year.",
     deadline: null,
     deadlines: [{"date":"2026-11-06","what":"Proposal deadline"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-05-10","quote":"The Library Publishing Coalition (LPC) is now accepting proposals for the 2027 Virtual Library Publishing Forum to be held May 10-13, 2027!","url":"https://librarypublishing.org/program/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-06","quote":"The proposal deadline is November 6, 2026.","url":"https://librarypublishing.org/2027-library-publishing-forum-call-for-proposals/","seen":"2026-10-22"}]
   },
   {
     id: 120,
@@ -2293,7 +2337,8 @@ const CONFERENCES = [
     international: true,
     description: "International conference on health and medical libraries and information. 2027 theme: 'Human in the Loop' — health librarians navigating AI, evidence, research and care.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-06-28","quote":"EAHIL 2027 Groningen – UMCG 28 June – 2 July 2027","url":"https://eahil.eu/","seen":"2026-10-22"}]
   },
   {
     id: 123,
@@ -2383,7 +2428,8 @@ const CONFERENCES = [
     description: "International niche conference on information literacy, drawing delegates from 30+ countries. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Call for presentations open",
     deadlines: [{"date":"2026-11-11","what":"Call for presentations deadline"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-04-21","quote":"City St George’s, University of London, 21-23 April 2027","url":"https://www.lilacconference.com/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-11","quote":"Call for presentations deadline: 11 November 2026 (16:00 GMT)","url":"https://www.lilacconference.com/lilac-2027/call-for-presentations-1","seen":"2026-10-22"}]
   },
   {
     id: 128,
@@ -2401,7 +2447,8 @@ const CONFERENCES = [
     international: true,
     description: "The UKSG 50th Annual Conference and Exhibition marks the organisation's 50th anniversary.",
     deadline: "Call for topics closed; registration opens later in 2026",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-04-05","quote":"Monday, April 5, 2027 – 08:00 BST to Wednesday, April 7, 2027 – 13:30 BST","url":"https://www.uksg.org/events/conference27/","seen":"2026-10-22"}]
   },
   {
     id: 129,
@@ -2505,7 +2552,8 @@ const CONFERENCES = [
     international: false,
     description: "The officially announced 2027 edition of the Florida Library Association's annual gathering, continuing regional tracks on emerging technology, data literacy, and library administrative strategies.",
     deadline: null,
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-05-11","quote":"May 11-14, 2027","url":"https://www.flalib.org/save-date-2027-2029-annual-conferences","seen":"2026-10-22"}]
   },
   {
     id: 135,
@@ -2523,7 +2571,8 @@ const CONFERENCES = [
     international: false,
     description: "Operating under the theme 'Libraries Because ______,' this state association conference and trade show brings together librarians, trustees, and vendors. Included for professional-development completeness; AI programming varies by year.",
     deadline: "Proposals closed March 20, 2026",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-04","quote":"Wed Nov 4, 2026 2026 NYLA Conference Category: Continuing Education","url":"https://www.nyla.org/annual-conference","seen":"2026-10-22"}]
   },
   {
     id: 136,
@@ -2612,7 +2661,8 @@ const CONFERENCES = [
     description: "One of the world's largest edtech exhibitions and conferences, showcasing industry-wide innovations, institutional AI infrastructures, and digital content delivery frameworks relevant to library services.",
     deadline: null,
     deadlines: [{"date":"2026-12-07","what":"On-time registration closes"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-01-20","quote":"Bett UK: Leading EdTech Event · 20-22 Jan 2027, ExCeL London","url":"https://uk.bettshow.com/","seen":"2026-10-22"},{"about":"deadline","date":"2026-12-07","quote":"On-time registration closes Monday 7 December 2026","url":"https://uk.bettshow.com/visitor-registration","seen":"2026-10-22"}]
   },
   {
     id: 141,
@@ -2702,7 +2752,8 @@ const CONFERENCES = [
     description: "The 27th IEEE ICALT, the IEEE Technical Committee on Learning Technology's annual conference on learning technologies. Its 14 tracks include Artificial Intelligence and Smart Learning Environments (AISLE) and big data and learning analytics; registration is offered both in person and online.",
     deadline: "Papers due January 15, 2027",
     deadlines: [{"date":"2027-01-15","what":"Papers due"},{"date":"2027-05-10","what":"Registration closes"},{"date":"2027-06-04","what":"Early-bird rate ends"},{"date":"2027-06-18","what":"Registration closes"},{"date":"2027-07-02","what":"Registration closes"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-07-19","quote":"July 19-22, 2027 : ICALT 2027 Conference","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"},{"about":"deadline","date":"2027-01-15","quote":"January 15, 2027 : Submission deadline for all papers","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"},{"about":"deadline","date":"2027-05-10","quote":"May 10, 2027 : Author’s registration deadline","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"},{"about":"deadline","date":"2027-06-04","quote":"June 4, 2027 : Non-authors’ early bird registration deadline","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"},{"about":"deadline","date":"2027-06-18","quote":"June 18, 2027: In-person non-author registration deadline","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"},{"about":"deadline","date":"2027-07-02","quote":"July 2, 2027: Online non-author registration deadline","url":"https://tc.computer.org/tclt/icalt-2027/","seen":"2026-10-22"}]
   },
   {
     id: 146,
@@ -2721,7 +2772,8 @@ const CONFERENCES = [
     international: true,
     description: "Organised by the Singapore Alliance of University Libraries, the 2026 conference is themed \"AI and Open Research: Building Trust, Ensuring Security, Driving Impact\". It runs as a half-day pre-conference workshop followed by a full-day main conference.",
     deadline: "Registration closed",
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2026-11-04","quote":"Join us in Singapore from 4–5 November 2026 at the Nanyang Executive Centre, Nanyang Technological University","url":"https://libguides.ntu.edu.sg/SGORconference2026","seen":"2026-10-22"}]
   },
   {
     id: 147,
@@ -2815,7 +2867,8 @@ const CONFERENCES = [
     description: "The premier biennial African library summit, exploring decolonized digital transformation, open metadata infrastructures, and local policies to govern artificial intelligence across African libraries.",
     deadline: null,
     deadlines: [{"date":"2026-10-26","what":"Full papers due"},{"date":"2026-11-09","what":"Proposals due"},{"date":"2026-12-27","what":"Full poster picture due"}],
-    checked: "2026-10-22"
+    checked: "2026-10-22",
+    sources: [{"about":"dates","date":"2027-05-24","quote":"Conference Date: 24 th – 28 th May, 2027, Livingstone, Zambia","url":"https://web.aflia.net/call-for-abstracts-7th-aflia-conference-9th-africa-library-summit-aflia-conference/","seen":"2026-10-22"},{"about":"deadline","date":"2026-10-26","quote":"Submission of full papers – 26 th October 2026","url":"https://web.aflia.net/call-for-abstracts-7th-aflia-conference-9th-africa-library-summit-aflia-conference/","seen":"2026-10-22"},{"about":"deadline","date":"2026-11-09","quote":"Submission of description for Ignite Talks – 9 th November, 2026","url":"https://web.aflia.net/call-for-abstracts-7th-aflia-conference-9th-africa-library-summit-aflia-conference/","seen":"2026-10-22"},{"about":"deadline","date":"2026-12-27","quote":"Submission of the representation (picture) of full poster – 27 th December 2026","url":"https://web.aflia.net/call-for-abstracts-7th-aflia-conference-9th-africa-library-summit-aflia-conference/","seen":"2026-10-22"}]
   },
   {
     id: 152,
@@ -2959,6 +3012,14 @@ function makeCard(c, i = 0) {
     : c.checked
     ? `<span class="chk" title="The organizer's site was last checked on this date">${svgCheck} Checked ${fmtDate(c.checked, true)}</span>`
     : `<span class="chk">${svgCheck} Link verified</span>`;
+  // Organizer's own words behind the dates and deadlines, hidden until asked for.
+  const srcs = (c.sources || []).filter(x => x.about === 'dates' || !past);
+  const srcBtn = srcs.length ? `<button class="src-btn" type="button" aria-expanded="false" aria-controls="src-${c.id}" onclick="toggleSources(this)">Sources</button>` : '';
+  const srcPanel = srcs.length ? `<div class="srcs" id="src-${c.id}" hidden><ul>${srcs.map(x => {
+    const d = x.about === 'dates' ? null : (c.deadlines || []).find(d => d.date === x.date);
+    const label = x.about === 'dates' ? 'Dates' : `${esc(d ? d.what : 'Deadline')} · ${fmtDate(x.date)}`;
+    return `<li><b>${label}</b><q>${esc(x.quote)}</q><small>Quoted from <a href="${esc(textLink(x))}" target="_blank" rel="noopener">${esc(new URL(x.url).hostname.replace(/^www\./, ''))}</a> on ${fmtDate(x.seen, true)}</small></li>`;
+  }).join('')}</ul></div>` : '';
   const calBtn = c.dateSort >= TODAY && hasExactDates(c)
     ? `<button class="btn" type="button" onclick="downloadIcs(${c.id})" aria-label="Add ${esc(c.name)} to your calendar">${svgCal} <span class="wide">Add to </span>calendar</button>` : '';
   return `<article class="card${past ? ' is-past' : ''}" id="conf-${c.id}" style="--i:${Math.min(i, 8)}">
@@ -2973,9 +3034,10 @@ function makeCard(c, i = 0) {
       ${deadline}
     </div>
     <div class="card-actions">
-      ${checked}
+      ${checked}${srcBtn}
       <span class="sr-only">Organizer: ${esc(c.organizer)}</span>
       <span class="btns">${calBtn}<a class="btn primary" href="${esc(c.url)}" target="_blank" rel="noopener">${svgOut} Visit site</a></span>
+      ${srcPanel}
     </div>
   </div>
 </article>`;
@@ -3068,6 +3130,19 @@ function togglePanel() {
 }
 
 // Build an all-day .ics event in the browser; no server needed.
+function toggleSources(btn) {
+  const open = btn.getAttribute('aria-expanded') !== 'true';
+  btn.setAttribute('aria-expanded', open);
+  document.getElementById(btn.getAttribute('aria-controls')).hidden = !open;
+}
+
+// Link that scrolls to and highlights the quote on the organizer's page (Chrome,
+// Edge, Safari): the longest run of the quote without a middot, at most 10 words.
+function textLink(x) {
+  const part = x.quote.split(' · ').sort((a, b) => b.length - a.length)[0].split(' ').slice(0, 10).join(' ');
+  return x.url + '#:~:text=' + encodeURIComponent(part).replace(/-/g, '%2D');
+}
+
 function downloadIcs(id) {
   const c = CONFERENCES.find(x => x.id === id);
   if (!c) return;

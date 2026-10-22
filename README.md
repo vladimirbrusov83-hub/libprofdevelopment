@@ -10,7 +10,7 @@ Live: https://libprofdevelopment.vercel.app
 
 - **Closing soon:** every proposal, registration and early-bird deadline in the next 30 days, at the top of the page
 - **At a glance:** upcoming events, events starting in the next 30 days, deadlines in the next 30 days, and events that are 100% about AI
-- **On each card:** dates, location, format, organizer, a short description, the next deadline with a countdown, the date the organizer's site was last checked, an **Add to calendar** button (.ics) and a link to the official site
+- **On each card:** dates, location, format, organizer, a short description, the next deadline with a countdown, the date the organizer's site was last checked, a **Sources** button that shows the line of the organizer's site each date was taken from, an **Add to calendar** button (.ics) and a link to the official site
 - **AI focus label:** 100% AI Focus, Major AI Track, or "AI varies" for general conferences
 - **Search** by name, organizer or topic, and **filter** in the side panel by date (Upcoming, Past, All), audience, AI focus (100% AI, Major AI track, AI varies), virtual/hybrid and outside the U.S., with live counts; sort by event date or next deadline
 
@@ -47,7 +47,10 @@ Edit the `CONFERENCES` array in `index.html`. Each entry looks like this:
   deadlines: [                    // optional dated deadlines: drive "Closing soon" and the card countdown
     { date: "2026-11-30", what: "Proposals due" }
   ],
-  checked: "2026-10-22"           // set by the refresh script when the organizer's site was confirmed
+  checked: "2026-10-22",          // set by the refresh script when the organizer's site was confirmed
+  sources: [                      // set by the refresh script: the organizer's own words behind the dates
+    { about: "deadline", date: "2026-11-30", quote: "Proposals due November 30, 2026", url: "https://...", seen: "2026-10-22" }
+  ]
 }
 ```
 

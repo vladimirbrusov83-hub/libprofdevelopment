@@ -163,9 +163,9 @@ for (const id of ids) {
   if (x.status === "no-future-edition" && !Object.keys(set).length) {
     ops.push({ id, outcome: "no-future-edition", note: "verified pipeline: no next edition on saved pages" });
   } else if (Object.keys(set).length) {
-    ops.push({ id, set, outcome: "resolved", note: ev.map(e => `${e.field}: "${e.quote}"`).join(" | ").slice(0, 400), sources });
+    ops.push({ id, set, outcome: "resolved", note: ev.map(e => `${e.field}: "${e.quote}"`).join(" | ").slice(0, 400), sources, claims: ev });
   } else if (x.status === "found" && !problems.length) {
-    ops.push({ id, outcome: "resolved", note: "verified pipeline: no change", sources });
+    ops.push({ id, outcome: "resolved", note: "verified pipeline: no change", sources, claims: ev });
   }
 }
 
