@@ -204,6 +204,70 @@ footer a:hover { text-decoration-color: #fff; }
   .util .container > span:first-child { display: none; }
   footer .container { grid-template-columns: 1fr; }
 }
+/* ── Motion ──
+   Short, quiet transitions (150–450ms): things rise into place on load, lift
+   slightly on hover and press down on click. All of it switches off for
+   people who ask their system for reduced motion. */
+:root { --ease: cubic-bezier(.22, 1, .36, 1); }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes flash-ring { 0% { box-shadow: 0 0 0 0 rgba(201,162,39,.6); } 70% { box-shadow: 0 0 0 10px rgba(201,162,39,0); } 100% { box-shadow: 0 0 0 3px rgba(201,162,39,.35); } }
+@keyframes pulse-dot { 0% { box-shadow: 0 0 0 0 rgba(180,35,24,.45); } 70%, 100% { box-shadow: 0 0 0 6px rgba(180,35,24,0); } }
+@keyframes slide-down { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+.band h1, .band p { animation: rise .6s var(--ease) backwards; }
+.band p { animation-delay: .08s; }
+.stat { position: relative; animation: rise .55s var(--ease) backwards; transition: transform .25s var(--ease), box-shadow .25s; }
+.stat:nth-child(2) { animation-delay: .06s; } .stat:nth-child(3) { animation-delay: .12s; } .stat:nth-child(4) { animation-delay: .18s; }
+.stat:hover { transform: translateY(-3px); box-shadow: 0 14px 26px -16px rgba(11,37,69,.45); }
+.panel, .soon { animation: rise .5s var(--ease) .15s backwards; }
+
+.card { animation: rise .45s var(--ease) backwards; animation-delay: calc(var(--i, 0) * 45ms); transition: transform .25s var(--ease), box-shadow .25s, border-color .25s; }
+.card:hover { transform: translateY(-2px); }
+.card .cal { transition: transform .25s var(--ease), border-color .25s; }
+.card .cal em { transition: background-color .25s; }
+.card:hover .cal { transform: translateY(-1px); border-color: var(--line-2); }
+.card:not(.is-past):hover .cal em { background: var(--blue); }
+.card h3 a { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .3s var(--ease), color .2s; }
+.card h3 a:hover { text-decoration: none; background-size: 100% 1px; }
+.card.flash { animation: flash-ring 1s ease-out; }
+.mh { animation: fade .4s ease backwards; }
+
+.btn { transition: transform .2s var(--ease), box-shadow .2s, background-color .15s, border-color .15s, color .15s; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 14px -8px rgba(11,37,69,.45); }
+.btn:active { transform: translateY(0) scale(.97); box-shadow: none; transition-duration: .08s; }
+.btn svg { transition: transform .25s var(--ease); }
+.btn.primary:hover svg { transform: translate(2px, -2px); }
+.btn:not(.primary):hover svg { transform: rotate(-8deg) scale(1.08); }
+
+.soon-item { transition: transform .2s var(--ease), border-color .15s, background-color .15s, box-shadow .2s; }
+.soon-item:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -12px rgba(180,35,24,.45); }
+.soon-item:active { transform: scale(.98); }
+.soon-list li { animation: rise .4s var(--ease) backwards; animation-delay: calc(.2s + var(--i, 0) * 50ms); }
+.soon-what .live { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--red); margin-right: 6px; vertical-align: 1px; animation: pulse-dot 1.8s ease-out infinite; }
+.soon.open .soon-list li { animation-delay: 0s; }
+.soon-more, .clear-link { transition: color .15s, transform .2s var(--ease); }
+.soon-more:hover, .clear-link:hover { transform: translateX(2px); }
+
+.grp label { transition: color .15s, transform .15s var(--ease); border-radius: 3px; }
+.grp label:hover { color: var(--ink); transform: translateX(2px); }
+.cnt { transition: color .2s; }
+.grp label:has(input:checked) { color: var(--ink); font-weight: 600; }
+.grp label:has(input:checked) .cnt { color: var(--blue); font-weight: 600; }
+#conf-search { transition: border-color .2s, box-shadow .2s; }
+#conf-search:focus { outline: none; box-shadow: 0 0 0 3px rgba(29,95,168,.22); }
+#results-count b { display: inline-block; }
+#results-count.bump b { animation: rise .35s var(--ease); }
+.pill, .dl { transition: transform .2s var(--ease); }
+.card:hover .dl.urgent { transform: translateX(1px); }
+.panel.open .panel-body { animation: slide-down .25s var(--ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .card:hover, .stat:hover, .btn:hover, .soon-item:hover, .grp label:hover { transform: none; }
+}
+
 @media print {
   .util, .panel, .soon, .btns, footer { display: none !important; }
   .layout { display: block; }
@@ -2702,9 +2766,20 @@ function filtersOn() {
 }
 
 // ── Header stats ──
+// Numbers count up once on load (skipped for reduced motion).
+function countUp(el, target) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !target) { el.textContent = target; return; }
+  const start = performance.now();
+  const step = now => {
+    const p = Math.min(1, (now - start) / 900);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
 function updateHeaderStats() {
   const upcoming = LIST.filter(c => !isPast(c));
-  const set = (id, n) => { document.getElementById(id).textContent = n; };
+  const set = (id, n) => countUp(document.getElementById(id), n);
   set('upcoming-count', upcoming.length);
   set('soon-count', upcoming.filter(c => c.dateSort <= IN_30_DAYS).length);
   set('deadline-count', closingSoon().length);
@@ -2738,7 +2813,7 @@ function calBlock(c) {
   return `<div class="cal" aria-hidden="true"><em>${monShort(c.dateSort)}</em><b>${Number(c.dateSort.slice(8))}</b><span>${end}</span></div>`;
 }
 
-function makeCard(c) {
+function makeCard(c, i = 0) {
   const past = isPast(c);
   const next = past ? null : nextDeadline(c);
   const n = next ? daysUntil(next.date) : null;
@@ -2753,7 +2828,7 @@ function makeCard(c) {
     : `<span class="chk">${svgCheck} Link verified</span>`;
   const calBtn = c.dateSort >= TODAY && hasExactDates(c)
     ? `<button class="btn" type="button" onclick="downloadIcs(${c.id})" aria-label="Add ${esc(c.name)} to your calendar">${svgCal} <span class="wide">Add to </span>calendar</button>` : '';
-  return `<article class="card${past ? ' is-past' : ''}" id="conf-${c.id}">
+  return `<article class="card${past ? ' is-past' : ''}" id="conf-${c.id}" style="--i:${Math.min(i, 8)}">
   ${calBlock(c)}
   <div>
     <div class="card-top"><h3><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a></h3>${past ? '<span class="pill past">Past</span>' : ''}</div>
@@ -2794,7 +2869,9 @@ function render() {
   updateCounts();
 
   const scope = state.q ? 'matching' : state.when === 'all' ? '' : state.when;
-  document.getElementById('results-count').innerHTML = `Showing <b>${items.length}</b> ${scope ? scope + ' ' : ''}conference${items.length === 1 ? '' : 's'}`;
+  const rc = document.getElementById('results-count');
+  rc.classList.remove('bump'); void rc.offsetWidth; rc.classList.add('bump');
+  rc.innerHTML = `Showing <b>${items.length}</b> ${scope ? scope + ' ' : ''}conference${items.length === 1 ? '' : 's'}`;
 
   const box = document.getElementById('cards-container');
   if (!items.length) {
@@ -2802,10 +2879,10 @@ function render() {
     return;
   }
   if (state.sort === 'deadline') { box.innerHTML = items.map(makeCard).join(''); return; }
-  let html = '', month = null, group = [];
+  let html = '', month = null, group = [], shown = 0;
   const flush = () => {
     if (!group.length) return;
-    html += `<h2 class="mh">${monthLabel(group[0].dateSort)}<span>${group.length} event${group.length === 1 ? '' : 's'}</span></h2>` + group.map(makeCard).join('');
+    html += `<h2 class="mh">${monthLabel(group[0].dateSort)}<span>${group.length} event${group.length === 1 ? '' : 's'}</span></h2>` + group.map(c => makeCard(c, shown++)).join('');
     group = [];
   };
   for (const c of items) {
@@ -2821,9 +2898,9 @@ function renderClosingSoon() {
   const items = closingSoon();
   const box = document.getElementById('soon');
   if (!items.length) { box.hidden = true; return; }
-  document.getElementById('soon-list').innerHTML = items.map(({ c, d }) => {
+  document.getElementById('soon-list').innerHTML = items.map(({ c, d }, i) => {
     const n = daysUntil(d.date);
-    return `<li><a class="soon-item${n > 14 ? ' later' : ''}" href="#conf-${c.id}" onclick="return showCard(${c.id})"><span class="soon-name">${esc(c.name)}</span><span class="soon-what">${esc(d.what)} ${fmtDate(d.date)} · ${whenText(n)}</span></a></li>`;
+    return `<li style="--i:${Math.min(i, 8)}"><a class="soon-item${n > 14 ? ' later' : ''}" href="#conf-${c.id}" onclick="return showCard(${c.id})"><span class="soon-name">${esc(c.name)}</span><span class="soon-what">${n <= 1 ? '<span class="live" aria-hidden="true"></span>' : ''}${esc(d.what)} ${fmtDate(d.date)} · ${whenText(n)}</span></a></li>`;
   }).join('');
   const more = document.getElementById('soon-more');
   more.textContent = `Show all ${items.length} deadlines`;
@@ -2837,8 +2914,8 @@ function showCard(id) {
   const el = document.getElementById('conf-' + id);
   if (!el) return true;
   el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  el.classList.add('flash');
-  setTimeout(() => el.classList.remove('flash'), 1800);
+  el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+  setTimeout(() => el.classList.remove('flash'), 2200);
   return false;
 }
 
