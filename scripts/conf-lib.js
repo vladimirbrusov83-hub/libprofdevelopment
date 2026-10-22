@@ -12,7 +12,7 @@ const HTML = path.join(__dirname, "..", "index.html");
 const KEYS = [
   "id", "name", "organizer", "dates", "dateSort", "dateEnd", "location",
   "format", "url", "urlVerified", "urlNote", "category", "aiFocus",
-  "international", "description", "deadline"
+  "international", "description", "deadline", "deadlines", "checked"
 ];
 
 const AI_FOCUS = ["ai100", "aibig", "aisig"];
@@ -77,6 +77,16 @@ function validate(list) {
     if (typeof c.urlVerified !== "boolean") errs.push(`${at}: urlVerified must be boolean`);
     if (typeof c.international !== "boolean") errs.push(`${at}: international must be boolean`);
     if (!/^https:\/\//.test(c.url || "")) errs.push(`${at}: url must be https`);
+    // `deadlines` = dated, actionable deadlines ({ date: "YYYY-MM-DD", what: "Proposals due" })
+    // that drive the "Closing soon" strip; `deadline` stays as the free-text status note.
+    if (c.deadlines !== undefined) {
+      if (!Array.isArray(c.deadlines)) errs.push(`${at}: deadlines must be an array`);
+      else for (const d of c.deadlines) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(d && d.date || "") || !(d && d.what)) errs.push(`${at}: each deadline needs date (YYYY-MM-DD) and what`);
+      }
+    }
+    // `checked` = the day a refresh last loaded the organizer's site and confirmed the entry.
+    if (c.checked !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(c.checked)) errs.push(`${at}: bad checked ${c.checked}`);
     // Rolling an event forward means renaming it too — a card reading
     // "IFLA WLIC 2026" above 2027 dates is the easy mistake here.
     const yrs = (c.name || "").match(/20\d\d/g);

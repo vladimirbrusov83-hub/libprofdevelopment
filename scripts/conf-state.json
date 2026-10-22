@@ -222,8 +222,7 @@
     "40": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21",
-      "note": "aiFocus kept: 2027 programme not published yet"
+      "recheckAfter": "2026-11-21"
     },
     "41": {
       "lastChecked": "2026-10-22",
@@ -270,9 +269,9 @@
     },
     "49": {
       "lastChecked": "2026-10-22",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2027-01-20",
-      "note": "library20.com conferences page lists no upcoming events"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "no dated events; library20.com lists none upcoming"
     },
     "50": {
       "lastChecked": "2026-09-02",
@@ -356,8 +355,7 @@
     "65": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21",
-      "note": "aiFocus kept: 2027 programme not published yet"
+      "recheckAfter": "2026-11-21"
     },
     "66": {
       "lastChecked": "2026-10-22",
@@ -419,9 +417,9 @@
     },
     "76": {
       "lastChecked": "2026-10-22",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2027-01-20",
-      "note": "Brick & Click page lists no dates for the next edition"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "no dates published for next edition"
     },
     "77": {
       "lastChecked": "2026-09-02",
@@ -437,9 +435,9 @@
     },
     "79": {
       "lastChecked": "2026-10-22",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2027-01-20",
-      "note": "cobaes.org covers only the Oct 2025 Barranquilla edition"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "no 2026 edition found; only 2025 known"
     },
     "80": {
       "lastChecked": "2026-10-22",
@@ -531,15 +529,15 @@
     },
     "95": {
       "lastChecked": "2026-10-22",
-      "outcome": "blocked",
-      "recheckAfter": "2026-11-05",
-      "note": "liasa.org.za returned HTTP 403"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "2026 dates never confirmed; site blocks checks"
     },
     "96": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "loexconference.org shows the May 2026 Norfolk conference only; no 2027 dates"
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "loexconference.org announces LOEX 2027 online, May 11–14"
     },
     "97": {
       "lastChecked": "2026-10-22",
@@ -555,9 +553,9 @@
     },
     "99": {
       "lastChecked": "2026-10-22",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2027-01-20",
-      "note": "cdlc.org SAIL page lists only the Oct 2024 event"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "last held Oct 2024; nothing announced"
     },
     "100": {
       "lastChecked": "2026-10-22",
@@ -602,8 +600,7 @@
     "107": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21",
-      "note": "dates confirmed on charleston-hub Future Conference Dates page"
+      "recheckAfter": "2026-11-21"
     },
     "108": {
       "lastChecked": "2026-10-22",
@@ -809,8 +806,7 @@
     "145": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "recheckAfter": "2026-11-21"
     },
     "146": {
       "lastChecked": "2026-10-22",

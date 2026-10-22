@@ -50,8 +50,14 @@ const state = fs.existsSync(STATE) ? JSON.parse(fs.readFileSync(STATE, "utf8")) 
 const dropped = new Set();
 const log = [];
 
+// Outcomes that mean someone actually read the organizer's page; these stamp the
+// entry's visible "Checked <date>" mark. blocked / not-found never do.
+const CONFIRMED = ["resolved", "no-future-edition"];
+
 function record(id, outcome, note) {
   if (!outcome) return;
+  const entry = byId.get(id) || list.find(c => c.id === id);
+  if (entry && CONFIRMED.includes(outcome)) entry.checked = TODAY;
   state.entries[String(id)] = {
     lastChecked: TODAY,
     outcome,
@@ -80,7 +86,9 @@ for (const op of ops) {
   if (op.set) {
     const changed = Object.keys(op.set).filter(k => JSON.stringify(target[k]) !== JSON.stringify(op.set[k]));
     Object.assign(target, op.set);
-    record(op.id, op.outcome || "resolved", op.note);
+    // No outcome = a hand edit, not a site check: change the entry, leave its
+    // "Checked" stamp and recheck schedule alone.
+    record(op.id, op.outcome, op.note);
     log.push(`update #${op.id} ${target.name}${changed.length ? " [" + changed.join(", ") + "]" : " (no change)"}`);
     continue;
   }
