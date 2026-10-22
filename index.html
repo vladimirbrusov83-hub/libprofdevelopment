@@ -245,6 +245,19 @@ a:hover > .logo-mark { transform: rotate(-6deg) scale(1.06); }
   text-wrap: pretty;
 }
 @media (min-width: 640px) { .hero-sub { font-size: 1.1875rem; } }
+.hero-sub:has(+ .hero-updated) { margin-bottom: 1rem; }
+.hero-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 auto 2.25rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: var(--stone-100);
+  color: var(--stone-700);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
 .stats-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -611,6 +624,7 @@ footer { border-top: 1px solid var(--stone-200); background: var(--stone-50); }
     <div class="rv hero-pill"><span class="pill-dot" aria-hidden="true"></span>Conference Directory for Academic Libraries</div>
     <h1 class="rv w2">AI Professional Development</h1>
     <p class="rv w3 hero-sub">Conferences, summits, and professional gatherings — 2026 through 2027. Links verified at time of research.</p>
+    <p class="rv w3 hero-updated"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path stroke-linecap="round" d="M16 2.5v4M8 2.5v4M3 9.5h18"/></svg>Last updated October 22, 2026</p>
     <div class="stats-row">
       <div class="rv w2"><div class="stat" style="--c:#44403c"><span class="stat-num" id="total-count">138</span><span class="stat-label">Total</span></div></div>
       <div class="rv w3"><div class="stat" style="--c:#0F6E56"><span class="stat-num" id="upcoming-count">—</span><span class="stat-label">Upcoming</span></div></div>
@@ -634,7 +648,7 @@ footer { border-top: 1px solid var(--stone-200); background: var(--stone-50); }
     <div>
       <div class="filter-group-label">Status</div>
       <div class="filter-pills" id="status-filters">
-        <button class="pill" data-status="upcoming">Upcoming</button>
+        <button class="pill active-upcoming" data-status="upcoming">Upcoming</button>
         <button class="pill" data-status="past">Past</button>
       </div>
     </div>
@@ -1479,39 +1493,6 @@ const CONFERENCES = [
     deadline: "Early pricing through Nov 20, 2026"
   },
   {
-    id: 62,
-    name: "Back to School AI Summit 2026",
-    organizer: "AI Educator Tools",
-    dates: "September 8–9, 2026",
-    dateSort: "2026-09-08",
-    dateEnd: "2026-09-09",
-    location: "Virtual (free)",
-    format: "virtual",
-    url: "https://summit.aieducator.tools/",
-    urlVerified: true,
-    category: "edu",
-    aiFocus: "ai100",
-    international: false,
-    description: "Billed as the world's largest free AI conference for educators. Practical sessions on AI tools and strategies for K-20 classrooms. Fully virtual and free to attend.",
-    deadline: "Registration TBA"
-  },
-  {
-    id: 63,
-    name: "EDTECH WEEK AI for Educators Summit 2026",
-    organizer: "EdTech Week / Teachers College, Columbia University",
-    dates: "October 20, 2026",
-    dateSort: "2026-10-20",
-    location: "New York, NY (Teachers College, Columbia University)",
-    format: "inperson",
-    url: "https://www.edtechweek.com/ai-for-educators-summit",
-    urlVerified: true,
-    category: "edu",
-    aiFocus: "ai100",
-    international: false,
-    description: "Hands-on AI summit for educators at Columbia's Teachers College. Free for eligible K-20 educators. Sessions on practical AI integration, classroom tools, and responsible use.",
-    deadline: "Registration TBA"
-  },
-  {
     id: 64,
     name: "SXSW EDU 2026",
     organizer: "SXSW",
@@ -2113,22 +2094,6 @@ const CONFERENCES = [
     international: false,
     description: "CDLC-hosted virtual conference dedicated to libraries and AI. Watch for the next edition announcement.",
     deadline: "Monitor CDLC site for announcements"
-  },
-  {
-    id: 100,
-    name: "SLA-AGC Annual Conference 2026 (29th, expected)",
-    organizer: "Special Libraries Association – Arabian Gulf Chapter",
-    dates: "2026 dates unconfirmed (28th edition Sep 2025, Jeddah)",
-    dateSort: "2026-12-31",
-    location: "Gulf / GCC region",
-    format: "inperson",
-    url: "https://slaagc.org/",
-    urlVerified: true,
-    category: "lib",
-    aiFocus: "aisig",
-    international: true,
-    description: "Special Libraries Association's Arabian Gulf Chapter annual conference. Recurring themes include AI, emerging technology, and information institutions. English/Arabic.",
-    deadline: "Not yet posted"
   },
   {
     id: 101,
@@ -3022,7 +2987,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 function isPast(c) { return (c.dateEnd || c.dateSort) < TODAY; }
 
 let activeCategory = 'all';
-let activeStatus = null;
+let activeStatus = 'upcoming';
 let activeAI = null;
 let activeRegion = null;
 let searchQuery = '';
@@ -3169,12 +3134,12 @@ function render() {
   const items = applyFilters();
   items.sort((a, b) => a.dateSort < b.dateSort ? -1 : 1);
 
-  const filtersOn = activeCategory !== 'all' || activeStatus !== null || activeAI !== null || activeRegion !== null || searchQuery !== '';
+  const filtersOn = activeCategory !== 'all' || activeStatus !== 'upcoming' || activeAI !== null || activeRegion !== null || searchQuery !== '';
   clearBtn.style.display = filtersOn ? 'block' : 'none';
 
   if (items.length === 0) {
     const msg = searchQuery
-      ? `No conference matches “${searchInput.value.trim()}” — it may not be tracked here yet.`
+      ? `No ${activeStatus ? activeStatus + ' ' : ''}conference matches “${searchInput.value.trim()}”${activeStatus === 'upcoming' ? ' — try Past, or click Upcoming again to search all dates.' : ' — it may not be tracked here yet.'}`
       : 'No conferences match your filters.';
     container.innerHTML = `<div class="grid"><div class="empty"><svg width="32" height="32" viewBox="0 0 16 16" fill="currentColor" style="opacity:.3;margin:0 auto"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.099zm-5.242 1.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg><p>${msg}</p></div></div>`;
     resultsCount.textContent = '0 results';
@@ -3201,7 +3166,7 @@ function render() {
 
 function clearFilters() {
   activeCategory = 'all';
-  activeStatus = null;
+  activeStatus = 'upcoming';
   activeAI = null;
   activeRegion = null;
   searchQuery = '';
@@ -3210,6 +3175,7 @@ function clearFilters() {
   catBtns.forEach(b => b.className = 'pill');
   document.querySelector('[data-cat="all"]').className = 'pill active-all';
   statusBtns.forEach(b => b.className = 'pill');
+  document.querySelector('[data-status="upcoming"]').className = 'pill active-upcoming';
   aiBtns.forEach(b => b.className = 'pill');
   regionBtns.forEach(b => b.className = 'pill');
   render();

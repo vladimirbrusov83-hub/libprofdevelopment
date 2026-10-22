@@ -96,7 +96,7 @@ function write(list, { footerDate } = {}) {
   fs.writeFileSync(HTML + ".bak", html);
   html = html.replace(RE, (_, head, __) => head + serialize(list) + ";");
   if (footerDate) {
-    html = html.replace(/Last updated [A-Za-z]+ \d+, \d{4}/, "Last updated " + footerDate);
+    html = html.replace(/Last updated [A-Za-z]+ \d+, \d{4}/g, "Last updated " + footerDate);
   }
   fs.writeFileSync(HTML, html);
   // Re-parse what we actually wrote — a stray quote renders the page blank

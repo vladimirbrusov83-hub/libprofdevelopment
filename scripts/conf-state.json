@@ -343,15 +343,15 @@
     },
     "62": {
       "lastChecked": "2026-10-22",
-      "outcome": "not-found",
-      "recheckAfter": "2026-12-21",
-      "note": "summit.aieducator.tools returns 404; aieducator.tools lists no summit"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "not-found Oct 22, 2026: summit.aieducator.tools 404, no summit listed"
     },
     "63": {
       "lastChecked": "2026-10-22",
-      "outcome": "not-found",
-      "recheckAfter": "2026-12-21",
-      "note": "edtechweek.com/ai-for-educators-summit returns 404; edtechweek.com shows EDTECH WEEK 2027 'dates to be announced'"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "not-found Oct 22, 2026: summit page 404, no summit on edtechweek.com"
     },
     "65": {
       "lastChecked": "2026-10-22",
@@ -561,9 +561,9 @@
     },
     "100": {
       "lastChecked": "2026-10-22",
-      "outcome": "not-found",
-      "recheckAfter": "2026-12-21",
-      "note": "slaagc.org serves an empty directory index"
+      "outcome": "dropped",
+      "recheckAfter": "2036-10-19",
+      "note": "not-found Oct 22, 2026: slaagc.org serves an empty directory index"
     },
     "101": {
       "lastChecked": "2026-09-02",
