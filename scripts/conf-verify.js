@@ -76,16 +76,35 @@ for (const id of ids) {
     else {
       eventEnd = e.end || e.start;
       ev.push({ field: "dates", quote: e.quote, url: pg.url });
-      if (e.start !== c.dateSort || (e.end || undefined) !== (c.dateEnd || undefined)) {
-        set.dates = displayDates(e.start, e.end);
+      // A missing end date is "not stated", not "one-day event": only change the
+      // listing when the start moved or the page gives a different end day.
+      const end = e.end || (e.start === c.dateSort ? c.dateEnd : undefined);
+      if (e.start !== c.dateSort || (e.end && e.end !== (c.dateEnd || c.dateSort))) {
+        set.dates = displayDates(e.start, end);
         set.dateSort = e.start;
-        if (e.end && e.end !== e.start) set.dateEnd = e.end;
+        if (end && end !== e.start) set.dateEnd = end;
         // Rolling forward to a new year renames "Foo 2026" → "Foo 2027".
         const oldY = c.dateSort.slice(0, 4), newY = e.start.slice(0, 4);
         if (oldY !== newY && c.name.includes(oldY)) set.name = c.name.split(oldY).join(newY);
-        // Location and format aren't proven by a date quote: flag, don't auto-apply.
-        if (norm(e.location) !== norm(c.location) || e.format !== c.format) {
-          review.push({ id, name: c.name, kind: "check", issue: `new edition — confirm location/format: "${e.location}" (${e.format}) vs listed "${c.location}" (${c.format})`, url: pg.url });
+        // Last edition's free-text note ("Registration open", "CFP closed") is stale
+        // once the listing rolls forward; dated deadlines (if any) replace it.
+        if (oldY !== newY) {
+          set.deadline = null;
+          review.push({ id, name: c.name, kind: "check", issue: `rolled to ${newY} — description may still describe the ${oldY} edition: "${c.description.slice(0, 140)}…"`, url: pg.url });
+        }
+        // A moved edition usually moves city too. Apply the new location/format only
+        // when the page text backs it (every place word / "virtual|online" appears on
+        // the cited page); otherwise flag it so a stale city is never silently kept.
+        const pageNorm = norm(pg.text);
+        const placeWords = norm(e.location).split(/[^a-z\u00c0-\u024f]+/).filter(w => w.length > 2 && !["not", "stated", "the", "and", "online", "virtual"].includes(w));
+        const locOk = placeWords.length > 0 && placeWords.every(w => pageNorm.includes(w));
+        const fmtOk = e.format === "inperson" ? locOk : /virtual|online|zoom|hybrid|livestream/.test(pageNorm);
+        const moved = e.start.slice(0, 4) !== c.dateSort.slice(0, 4) || e.start.slice(0, 7) !== c.dateSort.slice(0, 7);
+        const bothOnline = e.format === "virtual" && c.format === "virtual";
+        if (moved && !bothOnline && (norm(e.location) !== norm(c.location) || e.format !== c.format)) {
+          if (locOk && fmtOk) { set.location = e.location; set.format = e.format; ev.push({ field: "location", quote: e.location, url: pg.url }); }
+          else if (e.format === "virtual" && fmtOk && !locOk) { set.location = "Online"; set.format = "virtual"; }
+          review.push({ id, name: c.name, kind: "check", issue: `new edition — ${set.location ? "location set to" : "confirm location/format:"} "${set.location || e.location}" (${set.format || e.format}); was "${c.location}" (${c.format})`, url: pg.url });
         }
       }
     }

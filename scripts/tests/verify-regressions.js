@@ -25,6 +25,7 @@ const cases = [
   ["US numeric range end", quoteHasDate("(1/16-3/14/27)", "2027-03-14")],
   ["wrong year rejected", !quoteHasDate("Oct 23, 2025", "2026-10-23")],
   ["month alone isn't a date", !quoteHasDate("March 2027", "2027-03-02")],
+  ["ordinals written '24 th' (AfLIA)", quoteHasDate("Conference Date: 24 th – 28 th May, 2027, Livingstone, Zambia", "2027-05-28")],
   ["curly quotes and dashes normalize", norm("Author’s registration – May 10") === "author's registration-may 10"]
 ];
 

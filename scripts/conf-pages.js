@@ -72,7 +72,7 @@ const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "
 // a quote with no year is allowed (rate tables often omit it).
 function quoteHasDate(quote, iso) {
   const [y, m, d] = iso.split("-").map(Number);
-  const q = norm(quote).replace(/(\d)(st|nd|rd|th)\b/g, "$1");
+  const q = norm(quote).replace(/(\d)\s?(st|nd|rd|th)\b/g, "$1");
   const years = (q.match(/\b20\d\d\b/g) || []).map(Number);
   if (years.length && !years.includes(y)) return false;
   if (q.includes(iso)) return true;

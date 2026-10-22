@@ -1,16 +1,16 @@
 {
   "entries": {
     "1": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "shsulibraryguides.org states 'GAIL 2026 Has Concluded'; no 2027 dates announced"
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"Our next conference is scheduled for June 7-10, 2027 .\""
     },
     "2": {
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "ai4lam.org/fantastic-futures lists only FF2026; no 2027 edition announced"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "3": {
       "lastChecked": "2026-09-02",
@@ -19,10 +19,10 @@
       "note": "ai4libraries.org shows only 'Stay Tuned' for 2026 — no dates announced; 2025 row renders nowhere"
     },
     "4": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Mississippi State page covers the inaugural May 2026 SEC AI Library Summit only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "5": {
       "lastChecked": "2026-09-02",
@@ -70,7 +70,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "diglib.org/dlf-events covers only the Oct 2026 virtual Forum; no 2027 Forum announced"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "15": {
       "lastChecked": "2026-10-22",
@@ -87,7 +87,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "cni.org returned HTTP 403"
+      "note": "403 from https://www.cni.org/event/fall-2026-membership-meeting"
     },
     "18": {
       "lastChecked": "2026-09-02",
@@ -111,7 +111,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "verified pipeline: no change"
     },
     "22": {
       "lastChecked": "2026-09-02",
@@ -120,22 +120,22 @@
       "note": "superseded by #21 (2026-08-10); 2025 rows are filtered out of the page"
     },
     "23": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "liberconference.eu covers LIBER 2026 (Trondheim) only"
+      "lastChecked": "2026-10-22",
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "404 from https://liberconference.eu/"
     },
     "24": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "verified pipeline: no change"
     },
     "25": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "events.educause.edu returned HTTP 403"
+      "note": "403 from https://events.educause.edu/annual-conference"
     },
     "26": {
       "lastChecked": "2026-09-02",
@@ -147,7 +147,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "events.educause.edu returned HTTP 403"
+      "note": "403 from https://events.educause.edu/educause-summit/2026"
     },
     "28": {
       "lastChecked": "2026-10-22",
@@ -156,69 +156,70 @@
       "note": "no change"
     },
     "29": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "aied-conference.org covers AIED 2026 only; no AIED 2027 details posted"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "30": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "aiet.org covers AIET 2026 (Zagreb) only; no 2027 edition announced"
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"will be held in Cologne, Germany during July 28-July 30, 2027\" | location: \"Cologne, Germany\" | papers_due: \"February 20\n2027\nSubmission Deadline\" | registration_closes: \"April 10\n2027\nRegistration Deadline\" | proposals_due: \"May 25\n2027\nProposal for Tutorials Deadline\""
     },
     "31": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"8-12 March 2027\" | proposals_due: \"Practitioner Submission Deadline |\n13 Oct 2026 22 Oct 2026\" | proposals_due: \"AI Agents Academy Submission Deadline |\n13 Oct 2026 27 Oct 2026\" | posters_due: \"Poster/Demo Submission Deadline |\n9 Nov 2026\" | early_bird_ends: \"Early-bird registration closes at 11:59 pm PST |\n15 Jan 2027\""
+      "note": "dates: \"LAK27 conference, Recife, Brazil |\n8-12 March 2027\" | papers_due: \"Practitioner Submission Deadline |\n13 Oct 2026 22 Oct 2026\" | proposals_due: \"AI Agents Academy Submission Deadline |\n13 Oct 2026 27 Oct 2026\" | posters_due: \"Poster/Demo Submission Deadline |\n9 Nov 2026\" | papers_due: \"Submission Deadline for papers to individual workshops that issue calls** |\n4 Dec 2026\" | early_bird_ends"
     },
     "32": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "2026.code4lib.org and code4lib.org/conference list nothing past March 2026; the 2027 hosting-proposals wiki page still shows no selected host"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "33": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "conference.capalibrarians.org covers CAPAL 2026 only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "34": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "asist.org ISS/SLC page covers the June 2026 summit only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "35": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "verified pipeline: no change"
     },
     "36": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "aiFocus kept: 2027 programme not published yet"
+      "note": "verified pipeline: no change"
     },
     "37": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "verified pipeline: no change"
     },
     "38": {
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "atechcon.org covers only the Sept 2026 Baltimore event; no 2027 edition announced"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "39": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "40": {
       "lastChecked": "2026-10-22",
@@ -229,13 +230,14 @@
     "41": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "42": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"November 18–20, 2026\" | early_bird_ends: \"Early Bird Registration extended to October 23!\""
+      "note": "verified pipeline: no change"
     },
     "43": {
       "lastChecked": "2026-09-02",
@@ -246,30 +248,32 @@
     "44": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "45": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"Denver, CO | June 1–4, 2027\" | registration_closes: \"April 16, 2027 Presenter registration deadline\" | papers_due: \"must be uploaded via the presenter portal by May 17, 2027.\""
     },
     "46": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"All presentations will take place via Zoom on Monday, November 16 and Tuesday, November 17, 2026\" | regular_rate_ends: \"Standard rate is $282 through November 16, 2026.\""
+      "note": "verified pipeline: no change"
     },
     "47": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ifla.org returned HTTP 403"
+      "note": "403 from https://www.ifla.org/events/save-the-date-ifla-wlic-2026-satellite-conference-ai-in-public-libraries/"
     },
     "48": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "uwyo.edu AI Summit page covers the May 2026 summit only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "49": {
       "lastChecked": "2026-10-22",
@@ -286,7 +290,8 @@
     "51": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "52": {
       "lastChecked": "2026-09-02",
@@ -298,17 +303,19 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"The 5th annual Teaching and Learning with AI Conference will be held June 1-3, 2027.\" | proposals_due: \"The deadline to submit a proposal is 11:59p.m. EST on January 22, 2027.\" | early_bird_ends: \"Early Bird: $700 (ends March 5, 2027)\" | registration_closes: \"Presenters: $650 (must register by April 9, 2027)\" | regular_rate_ends: \"General Registration: $800 (ends May 17, 2027)\""
+      "note": "verified pipeline: no change"
     },
     "54": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"October 28, 2026\nConference Begins\nOctober 30, 2026\nConference Ends\" | regular_rate_ends: \"Regular Rate (September 24—October 30, 2026)\""
     },
     "55": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "56": {
       "lastChecked": "2026-09-02",
@@ -317,34 +324,34 @@
       "note": "superseded by #61 Magna AI in Education Conference 2026; series renamed"
     },
     "57": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Stanford page marks the Feb 2026 summit as a past event; no 2027 summit announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "58": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "escp.eu page covers the March 2026 Paris summit only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "59": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "pwd.aa.ufl.edu AI² Summit page covers the 2026 Orlando event only"
+      "lastChecked": "2026-10-22",
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "404 from https://pwd.aa.ufl.edu/ai2-summit/"
     },
     "60": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "No 2027 US AI Summit; THE links only to a separate Global AI Summit 2027 with no dates published"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "61": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"Live: December 1-2, 2026\" | discount_ends: \"Register by November 20th to get this special pricing.\""
+      "note": "verified pipeline: no change"
     },
     "62": {
       "lastChecked": "2026-10-22",
@@ -362,25 +369,25 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"Join us this March 16 to 18 in Arlington, VA\" | discount_ends: \"Register by February 12 & SAVE!\""
+      "note": "verified pipeline: no change"
     },
     "66": {
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "AIES-26 page has no 2027 info; AAAI page (via search) lists nothing after Malmö 2026"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "67": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "learningatscale.hosting.acm.org covers L@S 2026 (Seoul) only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "68": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "educationaldatamining.org covers EDM 2026 (Seoul) only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "69": {
       "lastChecked": "2026-09-02",
@@ -401,27 +408,28 @@
       "note": "no change"
     },
     "72": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "ALIA National is biennial; site shows 2026 only, next expected 2028 but unannounced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "73": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"November 6, 2026 - November 11, 2026\""
     },
     "74": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ifla.org returned HTTP 403"
+      "note": "403 from https://www.ifla.org/"
     },
     "75": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"22.-25.6.2027 in Nürnberg\" | proposals_due: \"Der Call for Papers läuft vom 01.09. und endet am 07.12.2026.\""
+      "note": "verified pipeline: no change"
     },
     "76": {
       "lastChecked": "2026-10-22",
@@ -430,16 +438,16 @@
       "note": "no dates published for next edition"
     },
     "77": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "CARL conference is biennial on even years; no 2028 dates announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "78": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "cilipconference.org.uk has no 2027 dates posted"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "79": {
       "lastChecked": "2026-10-22",
@@ -451,13 +459,13 @@
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "XXIII CIBU held Oct 14–16, 2026; no later edition announced"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "81": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "tukenya.ac.ke lists only the 5th TUK International Conference (Nov 2026); no 2027 Connecting Codes edition"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "82": {
       "lastChecked": "2026-09-02",
@@ -469,55 +477,55 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"March 21 – 24, 2027 // Austin, Texas + Online\" | proposals_due: \"Call for Proposals Open: Aug 26 – Oct 29, 2026\""
+      "note": "verified pipeline: no change"
     },
     "84": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ifla.org returned HTTP 403"
+      "note": "403 from https://www.ifla.org/"
     },
     "85": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ifla.org returned HTTP 403"
+      "note": "403 from https://www.ifla.org/"
     },
     "86": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "2026.ifla.org satellite page lists 2026 meetings only; no 2027 satellites announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "87": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "2026.ifla.org satellite page lists 2026 meetings only; no 2027 satellites announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "88": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "2026.ifla.org satellite page lists 2026 meetings only; no 2027 satellites announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "89": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "2026.ifla.org satellite page lists 2026 meetings only; no 2027 satellites announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "90": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "zbw.eu shows the July 2026 event only; no 2027 edition announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "91": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "2027 dates/venue from ILA site news post"
+      "note": "verified pipeline: no change"
     },
     "92": {
       "lastChecked": "2026-09-02",
@@ -529,13 +537,13 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"This event takes place March 14-16, 2027, in Chandler, Arizona, at Gila River Resorts & Casinos – Wild Horse Pass.\" | proposals_due: \"THE CALL FOR PROPOSALS IS OPEN THROUGH OCTOBER 30.\" | discount_ends: \"Register by January 15 to save.\""
+      "note": "verified pipeline: no change"
     },
     "94": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Lehigh article covers the 2nd annual summit (Jan 2026); no 3rd summit announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "95": {
       "lastChecked": "2026-10-22",
@@ -553,7 +561,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "molib.org 2026 page has no 2027 conference info"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "98": {
       "lastChecked": "2026-09-02",
@@ -574,16 +582,16 @@
       "note": "not-found Oct 22, 2026: slaagc.org serves an empty directory index"
     },
     "101": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "IU Indianapolis blog announcement covers the 2026 online conference only"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "102": {
       "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
       "recheckAfter": "2027-01-20",
-      "note": "Page covers only the first edition (Breda, Oct 19–20, 2026); no next edition announced"
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "103": {
       "lastChecked": "2026-10-22",
@@ -592,21 +600,22 @@
       "note": "infolit.org.uk lists no 2027 Liverpool AI online conference"
     },
     "104": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "cultural.icpna.edu.pe lists no 2027 SIBI seminar"
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "500 from https://cultural.icpna.edu.pe/"
     },
     "105": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "106": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"2-4 December 2026 at Khon Kaen University, Thailand.\" | early_bird_ends: \"Early Registration\nby 31 October 2026\""
+      "note": "verified pipeline: no change"
     },
     "107": {
       "lastChecked": "2026-10-22",
@@ -617,7 +626,8 @@
     "108": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "109": {
       "lastChecked": "2026-10-22",
@@ -627,13 +637,14 @@
     "110": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"November 17–19, 2026\" | registration_closes: \"Last Day for Virtual Registration\nNovember 1, 2026\""
     },
     "111": {
       "lastChecked": "2026-10-22",
-      "outcome": "blocked",
-      "recheckAfter": "2026-11-05",
-      "note": "gla.georgialibraries.org DNS lookup failed (ENOTFOUND); search found no 2027 dates"
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "ENOTFOUND from https://gla.georgialibraries.org/Conferences"
     },
     "112": {
       "lastChecked": "2026-10-22",
@@ -644,18 +655,20 @@
     "113": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"April 19-22, 2027 at the Henry B. Gonzalez Convention Center in San Antonio, Texas\" | early_bird_ends: \"Early Bird October 1, 2026 – January 31, 2027\" | regular_rate_ends: \"Standard February 1 – March 31, 2027\""
     },
     "114": {
       "lastChecked": "2026-10-22",
-      "outcome": "blocked",
-      "recheckAfter": "2026-11-05",
-      "note": "accessconference.ca returned HTTP 503"
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "115": {
       "lastChecked": "2026-10-22",
-      "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "403 from https://www.amigos.org/"
     },
     "116": {
       "lastChecked": "2026-10-22",
@@ -663,10 +676,10 @@
       "recheckAfter": "2026-11-21"
     },
     "117": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "nasig.org lists the Autumn 2026 virtual conference; no 2027 annual conference dates"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "118": {
       "lastChecked": "2026-09-02",
@@ -675,27 +688,28 @@
       "note": "rbms.info lists the 2026 conference only"
     },
     "119": {
-      "lastChecked": "2026-09-02",
-      "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "librarypublishing.org says LPF 2026 has concluded; only a separate Showcase Week (Feb 2027) is listed"
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"The Library Publishing Coalition (LPC) is now accepting proposals for the 2027 Virtual Library Publishing Forum to be held May 10-13, 2027!\" | proposals_due: \"The proposal deadline is November 6, 2026.\""
     },
     "120": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "acrlnec.org: socket closed on two attempts"
+      "note": "ECONNRESET from https://acrlnec.org/"
     },
     "121": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "febab.org.br failed TLS (unable to verify certificate)"
+      "note": "UNABLE_TO_VERIFY_LEAF_SIGNATURE from https://www.febab.org.br/"
     },
     "122": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "123": {
       "lastChecked": "2026-09-02",
@@ -705,38 +719,39 @@
     },
     "124": {
       "lastChecked": "2026-10-22",
-      "outcome": "blocked",
-      "recheckAfter": "2026-11-05",
-      "note": "conul.ie returned HTTP 403"
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "125": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "cala-web.org 'Calls / Upcoming Events' explicitly says 'No upcoming events or calls'"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "126": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "sconul.ac.uk lists an Autumn 2026 conference but no 2027 Spring conference dates"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "127": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "dates: \"City St George’s, University of London, 21-23 April 2027\" | proposals_due: \"Call for presentations deadline: 11 November 2026 (16:00 GMT)\""
     },
     "128": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "129": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ifla.org returned HTTP 403"
+      "note": "403 from https://www.ifla.org/"
     },
     "130": {
       "lastChecked": "2026-09-02",
@@ -748,7 +763,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ila.org returned HTTP 403"
+      "note": "403 from https://www.ila.org/forum/1/illinois-association-of-college-research-libraries-forum-iacrl"
     },
     "132": {
       "lastChecked": "2026-09-02",
@@ -760,18 +775,19 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "verified pipeline: no change"
     },
     "135": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "136": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "alise.org returned HTTP 403"
+      "note": "403 from https://alise.org/event/ALISE2026"
     },
     "137": {
       "lastChecked": "2026-10-22",
@@ -780,81 +796,82 @@
       "note": "no change"
     },
     "138": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "abf.asso.fr shows only the 71e congrès (June 2026); no 72e congrès announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "139": {
       "lastChecked": "2026-10-22",
       "outcome": "blocked",
       "recheckAfter": "2026-11-05",
-      "note": "ea-tel.eu refused connection (ECONNREFUSED)"
+      "note": "ECONNREFUSED from https://ea-tel.eu/ectel2026"
     },
     "140": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "aiFocus kept: 2027 programme not published yet"
+      "note": "dates: \"Bett UK: Leading EdTech Event | 20-22 Jan 2027, ExCeL London\" | registration_closes: \"On-time registration closes Monday 7 December 2026\""
     },
     "141": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "earli.org lists 2026 SIG conferences only; no 2027 SIG 6 & 7 meeting announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "142": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "lislinks.com listing covers the 71st ILA conference (Feb 2026); no 72nd announced"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "143": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "conference site covers the April 2026 Jalpaiguri event only; no 2027 edition"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "145": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "dates: \"July 19-22, 2027 : ICALT 2027 Conference\" | papers_due: \"January 15, 2027 : Submission deadline for all papers (Full paper, Short paper, Discussion paper, and DC paper)\" | registration_closes: \"May 10, 2027 : Author’s registration deadline\" | early_bird_ends: \"June 4, 2027 : Non-authors’ early bird registration deadline\" | registration_closes: \"June 18, 2027: In-person non-author registrat"
+      "note": "verified pipeline: no change"
     },
     "146": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "verified pipeline: no change"
     },
     "147": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Aggregator page (low confidence) lists nothing past December 2026; no 2027 ICSTI conference"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "148": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Aggregator page (low confidence) lists nothing past December 2026; no 2027 PAARL summer conference"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "149": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Aggregator page (low confidence) lists nothing past December 2026; no FORCE2027"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "150": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "no-future-edition",
-      "recheckAfter": "2026-12-01",
-      "note": "Aggregator page (low confidence) lists nothing past December 2026; no 2027 PubTech conference"
+      "recheckAfter": "2027-01-20",
+      "note": "verified pipeline: no next edition on saved pages"
     },
     "151": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "no change"
+      "note": "dates: \"Conference Date: 24 th – 28 th May, 2027, Livingstone, Zambia\" | papers_due: \"Submission of full papers – 26 th October 2026\" | proposals_due: \"Submission of description for Ignite Talks – 9 th November, 2026\" | posters_due: \"Submission of the representation (picture) of full poster – 27 th December 2026\""
     },
     "152": {
       "lastChecked": "2026-09-02",
