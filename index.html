@@ -3210,7 +3210,7 @@ render();
   }
 
   var BUCKETS = 7, bucketPaths = [];
-  var pinned = -1, hovered = -1, labelAlpha = 0, labelIdx = -1;
+  var pinned = -1, pinnedUntil = 0, hovered = -1, labelAlpha = 0, labelIdx = -1;
 
   function roundRect(x, y, w, h, r) {
     ctx.beginPath();
@@ -3305,6 +3305,7 @@ render();
     var clock = (tMs / 1000) % CYCLE_S;
     for (i = 0; i < ROUTES.length; i++) {
       var rt = ROUTES[i], head, tail, alpha, q = (clock - i * STEP_S + CYCLE_S) % CYCLE_S / 3.2;
+      rt.q = q;
       if (reduced) { head = 1; tail = 0; alpha = 0.3; }
       else if (q >= 1) { head = 1; tail = 0; alpha = 0.07; }
       else {
@@ -3351,12 +3352,10 @@ render();
     ctx.globalAlpha = 1;
 
     /* city markers; the next conference's city pulses in gold */
-    var best = -1, bestZ = 0.35;
     for (i = 0; i < ALL.length; i++) {
       var mk = ALL[i];
       project(Math.sin(mk.lat * RAD), Math.cos(mk.lat * RAD), mk.lon * RAD, rotRad);
       mk.sx = P.x; mk.sy = P.y; mk.sz = P.z;
-      if (P.z > bestZ) { bestZ = P.z; best = i; }
     }
     for (i = 0; i < ALL.length; i++) {
       var mm = ALL[i];
@@ -3374,12 +3373,20 @@ render();
       ctx.beginPath(); ctx.arc(mm.sx, mm.sy, (isNext ? 4.4 : 2.9) * DPR * sc, 0, Math.PI * 2); ctx.fill();
     }
 
-    /* label: hovered/pinned city, else the one facing the viewer */
-    var want = hovered >= 0 ? hovered : pinned >= 0 && ALL[pinned].sz > 0.05 ? pinned : best;
-    if (want !== labelIdx) { if (labelAlpha < 0.05 || hovered >= 0) { labelIdx = want; } else want = labelIdx; }
-    labelAlpha += ((want === labelIdx && labelIdx >= 0 && ALL[labelIdx].sz > 0.05 ? 1 : 0) - labelAlpha) * 0.12;
-    if (want !== labelIdx || (labelIdx >= 0 && ALL[labelIdx].sz <= 0.05)) labelAlpha *= 0.85;
-    if (reduced && labelIdx >= 0) labelAlpha = 1;
+    /* label: the hovered city, a tapped city for 3 seconds, or — briefly — a
+       city as a comet lands on it (every third arrival, about a second each),
+       so the globe stays mostly uncovered */
+    var auto = -1;
+    if (!reduced) for (i = 0; i < ROUTES.length; i += 3) {
+      var rq = ROUTES[i].q;
+      if (rq > 0.55 && rq < 0.85 && ROUTES[i].to.sz > 0.15) { auto = ALL.indexOf(ROUTES[i].to); break; }
+    }
+    if (pinned >= 0 && (tMs > pinnedUntil || ALL[pinned].sz <= 0.05)) pinned = -1;
+    var want = hovered >= 0 ? hovered : pinned >= 0 ? pinned : auto;
+    if (want !== labelIdx) { if (labelAlpha < 0.05 || want >= 0 && (want === hovered || want === pinned)) { labelIdx = want; labelAlpha = 0; } }
+    var on = want >= 0 && want === labelIdx && ALL[labelIdx].sz > 0.05;
+    labelAlpha += ((on ? 1 : 0) - labelAlpha) * 0.22;
+    if (reduced) labelAlpha = on ? 1 : 0;
     if (labelIdx >= 0 && labelAlpha > 0.02) {
       var L = ALL[labelIdx], first = L.confs[0];
       var t1 = L.city + (L.confs.length > 1 ? " · " + L.confs.length + " conferences" : "");
@@ -3445,7 +3452,7 @@ render();
       // Mouse users already see the label on hover, so a click opens the card;
       // on touch the first tap shows the label and a second tap opens it.
       if (h >= 0 && (e.pointerType === "mouse" || pinned === h) && typeof showCard === "function") showCard(ALL[h].confs[0].id);
-      pinned = h; hovered = -1; if (h >= 0) labelIdx = h, labelAlpha = 0;
+      pinned = h; pinnedUntil = performance.now() + 3000; hovered = -1;
     }
     resumeAt = performance.now() + 2600;
   }
