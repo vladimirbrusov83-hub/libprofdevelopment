@@ -1,8 +1,6 @@
-# Professional Development — AI for Academic Libraries
+# AI Professional Development for Academic Libraries
 
 A filterable directory of AI-focused conferences and professional development for academic library workers, aligned with the [ACRL AI Competencies](https://www.ala.org/acrl/standards/ai). Compiled by Yulia Brusova.
-
-Part of [AI for Academic Libraries](https://ai-for-academic-libraries.vercel.app).
 
 ## What's in it
 
