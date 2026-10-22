@@ -6,6 +6,12 @@
       "recheckAfter": "2026-12-01",
       "note": "shsulibraryguides.org states 'GAIL 2026 Has Concluded'; no 2027 dates announced"
     },
+    "2": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "ai4lam.org/fantastic-futures lists only FF2026; no 2027 edition announced"
+    },
     "3": {
       "lastChecked": "2026-09-02",
       "outcome": "dropped",
@@ -24,6 +30,12 @@
       "recheckAfter": "2036-08-30",
       "note": "superseded by #46 (2026-11-16); 2025 rows are filtered out of the page"
     },
+    "7": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
     "9": {
       "lastChecked": "2026-09-02",
       "outcome": "dropped",
@@ -35,6 +47,12 @@
       "outcome": "dropped",
       "recheckAfter": "2036-08-30",
       "note": "superseded by #11 ACRL 2027 (announced); ACRL is biennial. 2025 rows render nowhere"
+    },
+    "11": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no extension found"
     },
     "12": {
       "lastChecked": "2026-09-02",
@@ -48,11 +66,28 @@
       "recheckAfter": "2036-08-30",
       "note": "superseded by #14 (2026-10-14); 2025 rows are filtered out of the page"
     },
+    "14": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "diglib.org/dlf-events covers only the Oct 2026 virtual Forum; no 2027 Forum announced"
+    },
+    "15": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
     "16": {
       "lastChecked": "2026-09-02",
       "outcome": "dropped",
       "recheckAfter": "2036-08-30",
       "note": "superseded by #15 (2026-11-18); 2025 rows are filtered out of the page"
+    },
+    "17": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "cni.org returned HTTP 403"
     },
     "18": {
       "lastChecked": "2026-09-02",
@@ -73,9 +108,10 @@
       "note": "charleston-hub.com lists the June 2026 Berlin edition and past years; no 2027 date"
     },
     "21": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
     },
     "22": {
       "lastChecked": "2026-09-02",
@@ -90,9 +126,16 @@
       "note": "liberconference.eu covers LIBER 2026 (Trondheim) only"
     },
     "24": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
+    "25": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "events.educause.edu returned HTTP 403"
     },
     "26": {
       "lastChecked": "2026-09-02",
@@ -101,15 +144,16 @@
       "note": "superseded by #25 (2026-09-29); 2025 rows are filtered out of the page"
     },
     "27": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "events.educause.edu returns 403; no 2027 EDUCAUSE Summit found"
+      "recheckAfter": "2026-11-05",
+      "note": "events.educause.edu returned HTTP 403"
     },
     "28": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
     },
     "29": {
       "lastChecked": "2026-09-02",
@@ -124,9 +168,9 @@
       "note": "aiet.org covers AIET 2026 (Zagreb) only; no 2027 edition announced"
     },
     "31": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
     },
     "32": {
       "lastChecked": "2026-09-02",
@@ -147,19 +191,49 @@
       "note": "asist.org ISS/SLC page covers the June 2026 summit only"
     },
     "35": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
     },
     "36": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "aiFocus kept: 2027 programme not published yet"
     },
     "37": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
+    "38": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "atechcon.org covers only the Sept 2026 Baltimore event; no 2027 edition announced"
+    },
+    "39": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "40": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "aiFocus kept: 2027 programme not published yet"
+    },
+    "41": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "42": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "43": {
       "lastChecked": "2026-09-02",
@@ -167,21 +241,26 @@
       "recheckAfter": "2026-12-01",
       "note": "con.openedx.org covers the May 2026 Salt Lake City conference only"
     },
-    "45": {
-      "lastChecked": "2026-09-02",
+    "44": {
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
+    },
+    "45": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "46": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
     },
     "47": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "ifla.org blocks fetching (403); no 2027 AI-in-public-libraries satellite found"
+      "recheckAfter": "2026-11-05",
+      "note": "ifla.org returned HTTP 403"
     },
     "48": {
       "lastChecked": "2026-09-02",
@@ -189,11 +268,22 @@
       "recheckAfter": "2026-12-01",
       "note": "uwyo.edu AI Summit page covers the May 2026 summit only"
     },
+    "49": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "library20.com conferences page lists no upcoming events"
+    },
     "50": {
       "lastChecked": "2026-09-02",
       "outcome": "dropped",
       "recheckAfter": "2036-08-30",
       "note": "Amigos page covers only the Dec 10 2025 session; no future edition announced"
+    },
+    "51": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "52": {
       "lastChecked": "2026-09-02",
@@ -202,9 +292,19 @@
       "note": "Northwestern Qatar page covers only the Feb 2025 symposium; no future edition announced"
     },
     "53": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
+    },
+    "54": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "55": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "56": {
       "lastChecked": "2026-09-02",
@@ -236,6 +336,35 @@
       "recheckAfter": "2026-12-01",
       "note": "No 2027 US AI Summit; THE links only to a separate Global AI Summit 2027 with no dates published"
     },
+    "61": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "62": {
+      "lastChecked": "2026-10-22",
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "summit.aieducator.tools returns 404; aieducator.tools lists no summit"
+    },
+    "63": {
+      "lastChecked": "2026-10-22",
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "edtechweek.com/ai-for-educators-summit returns 404; edtechweek.com shows EDTECH WEEK 2027 'dates to be announced'"
+    },
+    "65": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "aiFocus kept: 2027 programme not published yet"
+    },
+    "66": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "AIES-26 page has no 2027 info; AAAI page (via search) lists nothing after Malmö 2026"
+    },
     "67": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
@@ -254,22 +383,45 @@
       "recheckAfter": "2026-12-01",
       "note": "uchile.cl lists no 2027 Congreso de Bibliotecas Universitarias y Especializadas"
     },
+    "70": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "uni-augsburg.de has no mention of a 6th DACH-Tag"
+    },
+    "71": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
     "72": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "ALIA National is biennial; site shows 2026 only, next expected 2028 but unannounced"
     },
+    "73": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
     "74": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "ifla.org blocks fetching (403); no 2027 edition found"
+      "recheckAfter": "2026-11-05",
+      "note": "ifla.org returned HTTP 403"
     },
     "75": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
+    },
+    "76": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "Brick & Click page lists no dates for the next edition"
     },
     "77": {
       "lastChecked": "2026-09-02",
@@ -283,6 +435,18 @@
       "recheckAfter": "2026-12-01",
       "note": "cilipconference.org.uk has no 2027 dates posted"
     },
+    "79": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "cobaes.org covers only the Oct 2025 Barranquilla edition"
+    },
+    "80": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "XXIII CIBU held Oct 14–16, 2026; no later edition announced"
+    },
     "81": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
@@ -295,11 +459,22 @@
       "recheckAfter": "2026-12-01",
       "note": "bibliotheksverband.de KI-Fachtag page returns no content; no 2027 KI-Fachtag announced"
     },
+    "83": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
     "84": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "ifla.org blocks fetching (403); no 2027 edition of the Syrian libraries conference found"
+      "recheckAfter": "2026-11-05",
+      "note": "ifla.org returned HTTP 403"
+    },
+    "85": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "ifla.org returned HTTP 403"
     },
     "86": {
       "lastChecked": "2026-09-02",
@@ -331,11 +506,22 @@
       "recheckAfter": "2026-12-01",
       "note": "zbw.eu shows the July 2026 event only; no 2027 edition announced"
     },
+    "91": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "2027 dates/venue from ILA site news post"
+    },
     "92": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "dnb.de events run through September 2026 with no 2027 AI conference listed"
+    },
+    "93": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "94": {
       "lastChecked": "2026-09-02",
@@ -344,10 +530,10 @@
       "note": "Lehigh article covers the 2nd annual summit (Jan 2026); no 3rd summit announced"
     },
     "95": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "liasa.org.za returns 403 on /, /page/LAC and /page/2026salw; search results conflate the LIASA Annual Conference with SA Library Week and LITASA, so no dates could be confirmed"
+      "recheckAfter": "2026-11-05",
+      "note": "liasa.org.za returned HTTP 403"
     },
     "96": {
       "lastChecked": "2026-09-02",
@@ -355,11 +541,29 @@
       "recheckAfter": "2026-12-01",
       "note": "loexconference.org shows the May 2026 Norfolk conference only; no 2027 dates"
     },
+    "97": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "molib.org 2026 page has no 2027 conference info"
+    },
     "98": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "bibliotheksverband.de KI-Tagung page returns no content; no 2027 edition announced"
+    },
+    "99": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "cdlc.org SAIL page lists only the Oct 2024 event"
+    },
+    "100": {
+      "lastChecked": "2026-10-22",
+      "outcome": "not-found",
+      "recheckAfter": "2026-12-21",
+      "note": "slaagc.org serves an empty directory index"
     },
     "101": {
       "lastChecked": "2026-09-02",
@@ -367,17 +571,87 @@
       "recheckAfter": "2026-12-01",
       "note": "IU Indianapolis blog announcement covers the 2026 online conference only"
     },
+    "102": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "Page covers only the first edition (Breda, Oct 19–20, 2026); no next edition announced"
+    },
     "103": {
-      "lastChecked": "2026-09-02",
-      "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "infolit.org.uk unreachable (TLS error); no 2027 Liverpool AI online conference found"
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "infolit.org.uk lists no 2027 Liverpool AI online conference"
     },
     "104": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "cultural.icpna.edu.pe lists no 2027 SIBI seminar"
+    },
+    "105": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "106": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "107": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "dates confirmed on charleston-hub Future Conference Dates page"
+    },
+    "108": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "109": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "110": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "111": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "gla.georgialibraries.org DNS lookup failed (ENOTFOUND); search found no 2027 dates"
+    },
+    "112": {
+      "lastChecked": "2026-10-22",
+      "outcome": "no-future-edition",
+      "recheckAfter": "2027-01-20",
+      "note": "txla.org has no TCAL 2027 announcement"
+    },
+    "113": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "114": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "accessconference.ca returned HTTP 503"
+    },
+    "115": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "116": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "117": {
       "lastChecked": "2026-09-02",
@@ -398,21 +672,21 @@
       "note": "librarypublishing.org says LPF 2026 has concluded; only a separate Showcase Week (Feb 2027) is listed"
     },
     "120": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "acrlnec.org repeatedly unreachable (socket closed); no 2027 ACRL-NEC/NELIG conference found elsewhere"
+      "recheckAfter": "2026-11-05",
+      "note": "acrlnec.org: socket closed on two attempts"
     },
     "121": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "febab.org.br fails TLS certificate validation; no 2027 CBBD dates found"
+      "recheckAfter": "2026-11-05",
+      "note": "febab.org.br failed TLS (unable to verify certificate)"
     },
     "122": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
     },
     "123": {
       "lastChecked": "2026-09-02",
@@ -421,10 +695,10 @@
       "note": "caul.edu.au lists only September 2026 community-of-practice meetings; no 2027 event"
     },
     "124": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "conul.ie and conference.conul.ie return 403; no 2027 CONUL dates found in search"
+      "recheckAfter": "2026-11-05",
+      "note": "conul.ie returned HTTP 403"
     },
     "125": {
       "lastChecked": "2026-09-02",
@@ -439,20 +713,21 @@
       "note": "sconul.ac.uk lists an Autumn 2026 conference but no 2027 Spring conference dates"
     },
     "127": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
     },
     "128": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21"
     },
     "129": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "ifla.org blocks fetching (403); no 2027 IFLA LAC regional seminar found"
+      "recheckAfter": "2026-11-05",
+      "note": "ifla.org returned HTTP 403"
     },
     "130": {
       "lastChecked": "2026-09-02",
@@ -461,10 +736,10 @@
       "note": "miala.org lists the 2026 MIX conference only"
     },
     "131": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "blocked",
-      "recheckAfter": "2026-09-16",
-      "note": "ila.org returns 403; no 2027 IACRL Spring Sampler found"
+      "recheckAfter": "2026-11-05",
+      "note": "ila.org returned HTTP 403"
     },
     "132": {
       "lastChecked": "2026-09-02",
@@ -472,16 +747,46 @@
       "recheckAfter": "2026-12-01",
       "note": "metro.org lists the March 2026 STEM mini conference only"
     },
+    "134": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
+    "135": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
+    },
+    "136": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "alise.org returned HTTP 403"
+    },
+    "137": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
     "138": {
       "lastChecked": "2026-09-02",
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "abf.asso.fr shows only the 71e congrès (June 2026); no 72e congrès announced"
     },
+    "139": {
+      "lastChecked": "2026-10-22",
+      "outcome": "blocked",
+      "recheckAfter": "2026-11-05",
+      "note": "ea-tel.eu refused connection (ECONNREFUSED)"
+    },
     "140": {
-      "lastChecked": "2026-09-02",
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "aiFocus kept: 2027 programme not published yet"
     },
     "141": {
       "lastChecked": "2026-09-02",
@@ -501,10 +806,16 @@
       "recheckAfter": "2026-12-01",
       "note": "conference site covers the April 2026 Jalpaiguri event only; no 2027 edition"
     },
-    "146": {
-      "lastChecked": "2026-09-02",
+    "145": {
+      "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-10-02"
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
+    },
+    "146": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21"
     },
     "147": {
       "lastChecked": "2026-09-02",
@@ -529,6 +840,12 @@
       "outcome": "no-future-edition",
       "recheckAfter": "2026-12-01",
       "note": "Aggregator page (low confidence) lists nothing past December 2026; no 2027 PubTech conference"
+    },
+    "151": {
+      "lastChecked": "2026-10-22",
+      "outcome": "resolved",
+      "recheckAfter": "2026-11-21",
+      "note": "no change"
     },
     "152": {
       "lastChecked": "2026-09-02",
