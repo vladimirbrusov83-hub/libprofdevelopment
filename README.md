@@ -12,7 +12,7 @@ Live: https://libprofdevelopment.vercel.app
 - **At a glance:** upcoming events, events starting in the next 30 days, deadlines in the next 30 days, and events that are 100% about AI
 - **On each card:** dates, location, format, organizer, a short description, the next deadline with a countdown, the date the organizer's site was last checked, an **Add to calendar** button (.ics) and a link to the official site
 - **AI focus label:** 100% AI Focus, Major AI Track, or "AI varies" for general conferences
-- **Search** by name, organizer or topic, and **filter** by audience (Academic Libraries or Higher Education), status (Upcoming or Past), 100% AI focus, Virtual / Hybrid, and International
+- **Search** by name, organizer or topic, and **filter** in the side panel by date (Upcoming, Past, All), audience, AI focus (100% AI, Major AI track, AI varies), virtual/hybrid and outside the U.S., with live counts; sort by event date or next deadline
 
 Events move from "Upcoming" to "Past" on their own once their end date passes.
 
