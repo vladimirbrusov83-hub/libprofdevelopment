@@ -170,7 +170,8 @@
     "31": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"8-12 March 2027\" | proposals_due: \"Practitioner Submission Deadline |\n13 Oct 2026 22 Oct 2026\" | proposals_due: \"AI Agents Academy Submission Deadline |\n13 Oct 2026 27 Oct 2026\" | posters_due: \"Poster/Demo Submission Deadline |\n9 Nov 2026\" | early_bird_ends: \"Early-bird registration closes at 11:59 pm PST |\n15 Jan 2027\""
     },
     "32": {
       "lastChecked": "2026-09-02",
@@ -222,7 +223,8 @@
     "40": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"March 13–16, 2027 | Austin, TX\" | discount_ends: \"Save $250 off the walk-up rate when you register by 11:59pm PT on October 29.\""
     },
     "41": {
       "lastChecked": "2026-10-22",
@@ -232,7 +234,8 @@
     "42": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"November 18–20, 2026\" | early_bird_ends: \"Early Bird Registration extended to October 23!\""
     },
     "43": {
       "lastChecked": "2026-09-02",
@@ -253,7 +256,8 @@
     "46": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"All presentations will take place via Zoom on Monday, November 16 and Tuesday, November 17, 2026\" | regular_rate_ends: \"Standard rate is $282 through November 16, 2026.\""
     },
     "47": {
       "lastChecked": "2026-10-22",
@@ -293,7 +297,8 @@
     "53": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"The 5th annual Teaching and Learning with AI Conference will be held June 1-3, 2027.\" | proposals_due: \"The deadline to submit a proposal is 11:59p.m. EST on January 22, 2027.\" | early_bird_ends: \"Early Bird: $700 (ends March 5, 2027)\" | registration_closes: \"Presenters: $650 (must register by April 9, 2027)\" | regular_rate_ends: \"General Registration: $800 (ends May 17, 2027)\""
     },
     "54": {
       "lastChecked": "2026-10-22",
@@ -338,7 +343,8 @@
     "61": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"Live: December 1-2, 2026\" | discount_ends: \"Register by November 20th to get this special pricing.\""
     },
     "62": {
       "lastChecked": "2026-10-22",
@@ -355,7 +361,8 @@
     "65": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"Join us this March 16 to 18 in Arlington, VA\" | discount_ends: \"Register by February 12 & SAVE!\""
     },
     "66": {
       "lastChecked": "2026-10-22",
@@ -413,7 +420,8 @@
     "75": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"22.-25.6.2027 in Nürnberg\" | proposals_due: \"Der Call for Papers läuft vom 01.09. und endet am 07.12.2026.\""
     },
     "76": {
       "lastChecked": "2026-10-22",
@@ -460,7 +468,8 @@
     "83": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"March 21 – 24, 2027 // Austin, Texas + Online\" | proposals_due: \"Call for Proposals Open: Aug 26 – Oct 29, 2026\""
     },
     "84": {
       "lastChecked": "2026-10-22",
@@ -519,7 +528,8 @@
     "93": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"This event takes place March 14-16, 2027, in Chandler, Arizona, at Gila River Resorts & Casinos – Wild Horse Pass.\" | proposals_due: \"THE CALL FOR PROPOSALS IS OPEN THROUGH OCTOBER 30.\" | discount_ends: \"Register by January 15 to save.\""
     },
     "94": {
       "lastChecked": "2026-09-02",
@@ -537,7 +547,7 @@
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "loexconference.org announces LOEX 2027 online, May 11–14"
+      "note": "dates: \"May 11-14, Online\" | proposals_due: \"Monday, November 30, 2026: Deadline to submit proposals\" | proposals_due: \"Lightning Talk proposals due date is Monday, January 18, 2027.\" | posters_due: \"Poster Session proposals due date is in Monday, January 25, 2027.\" | papers_due: \"Friday, May 7, 2027: Deadline for Presentation presenters to submit a paper (up to 2500 words) for inclusion in the Co"
     },
     "97": {
       "lastChecked": "2026-10-22",
@@ -595,13 +605,14 @@
     "106": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"2-4 December 2026 at Khon Kaen University, Thailand.\" | early_bird_ends: \"Early Registration\nby 31 October 2026\""
     },
     "107": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
       "recheckAfter": "2026-11-21",
-      "note": "registration-rates page: Regular (September 24-October 23); Early Bird extended to September 23"
+      "note": "verified pipeline: no change"
     },
     "108": {
       "lastChecked": "2026-10-22",
@@ -807,7 +818,8 @@
     "145": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "dates: \"July 19-22, 2027 : ICALT 2027 Conference\" | papers_due: \"January 15, 2027 : Submission deadline for all papers (Full paper, Short paper, Discussion paper, and DC paper)\" | registration_closes: \"May 10, 2027 : Author’s registration deadline\" | early_bird_ends: \"June 4, 2027 : Non-authors’ early bird registration deadline\" | registration_closes: \"June 18, 2027: In-person non-author registrat"
     },
     "146": {
       "lastChecked": "2026-10-22",
