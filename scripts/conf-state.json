@@ -600,7 +600,8 @@
     "107": {
       "lastChecked": "2026-10-22",
       "outcome": "resolved",
-      "recheckAfter": "2026-11-21"
+      "recheckAfter": "2026-11-21",
+      "note": "registration-rates page: Regular (September 24-October 23); Early Bird extended to September 23"
     },
     "108": {
       "lastChecked": "2026-10-22",
