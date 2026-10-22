@@ -5,8 +5,8 @@
 //   node scripts/conf-run.js --ids 31,40,107
 //   node scripts/conf-run.js --queue          # whatever conf-audit queued
 //
-// Nothing here writes index.html. Review scripts/conf-updates.json and
-// scripts/pages/review.json, then: node scripts/conf-apply.js scripts/conf-updates.json --footer "<today>"
+// Nothing here writes index.html. Approve the changes on the review page:
+//   node scripts/conf-report.js   (writes scripts/conf-approved.json, then runs conf-apply on it)
 
 const fs = require("fs");
 const path = require("path");
@@ -39,3 +39,5 @@ if (failed.length) {
   node("conf-extract.js", ["--ids", failed.join(","), "--model", "sonnet", "--jobs", "4"]);
   node("conf-verify.js", ["--ids", ids.join(",")]);
 } else console.log("\n── 4/4 nothing failed, no Sonnet needed");
+
+console.log("\nnext: node scripts/conf-report.js   (approval page in the browser)");

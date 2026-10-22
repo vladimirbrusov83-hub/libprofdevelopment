@@ -6,7 +6,9 @@
 const fs = require("fs");
 const path = require("path");
 
-const HTML = path.join(__dirname, "..", "index.html");
+// CONF_HTML points the scripts at another copy, for --dry and read-only use only:
+// a real apply would still write this repo's conf-state.json, sitemap and llms.txt.
+const HTML = process.env.CONF_HTML || path.join(__dirname, "..", "index.html");
 
 // Canonical key order — matches how the array is already written by hand.
 const KEYS = [
