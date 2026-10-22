@@ -1,0 +1,5 @@
+# Everyone, including AI crawlers, is welcome to read and cite this directory.
+User-agent: *
+Allow: /
+
+Sitemap: https://libprofdevelopment.vercel.app/sitemap.xml

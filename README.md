@@ -53,7 +53,7 @@ Edit the `CONFERENCES` array in `index.html`. Each entry looks like this:
 
 After editing, update both "Last updated" dates (under the heading and in the footer).
 
-The `scripts/` folder holds the refresh tooling (`conf-lib`, `conf-dedupe`, `conf-audit`, `conf-apply`). It is kept out of the live site by `.vercelignore`.
+The `scripts/` folder holds the refresh tooling (`conf-lib`, `conf-dedupe`, `conf-audit`, `conf-apply`, the evidence pipeline `conf-run`, and `conf-seo`, which regenerates sitemap.xml, robots.txt, llms.txt and the crawler-readable copy after every data change). It is kept out of the live site by `.vercelignore`.
 
 ## License
 

@@ -113,6 +113,8 @@ function write(list, { footerDate } = {}) {
   // with no error, so never trust the in-memory copy.
   const back = parse(fs.readFileSync(HTML, "utf8"));
   if (back.length !== list.length) throw new Error("Round-trip mismatch after write");
+  // Keep sitemap, robots, llms.txt and the crawler-readable copy in step with the data.
+  require("./conf-seo").generate({ quiet: true });
   return back.length;
 }
 
