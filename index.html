@@ -12,6 +12,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Professional Development for Academic Libraries">
 <meta name="twitter:description" content="A filterable directory of conferences and professional development for academic library and higher-education workers, with every event rated for its AI content.">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#13315c">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PD Conferences">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Merriweather:wght@700&display=swap" rel="stylesheet">
@@ -52,6 +60,18 @@ button, input, select { font: inherit; color: inherit; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%; }
 
 /* ── Utility bar + masthead ── */
+.util-right { display: inline-flex; align-items: center; gap: 14px; }
+.install-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); color: var(--navy); border: 0; border-radius: 3px; padding: 3px 10px; font-size: 12px; font-weight: 700; cursor: pointer; transition: transform .2s var(--ease, ease), background-color .15s; }
+.install-btn:hover { background: #dbb43a; transform: translateY(-1px); }
+.install-btn[hidden] { display: none; }
+.install-tip { position: fixed; z-index: 60; top: 44px; right: 16px; width: min(320px, calc(100vw - 32px)); background: #fff; color: var(--ink); border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: var(--radius); box-shadow: 0 18px 40px -16px rgba(11,37,69,.5); padding: 14px 40px 14px 16px; font-size: 14px; animation: rise .3s var(--ease, ease); }
+.install-tip[hidden] { display: none; }
+.install-tip-title { font-weight: 700; margin-bottom: 4px; color: var(--navy); }
+.install-tip b { color: var(--navy); }
+.install-tip-close { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border: 0; background: none; font-size: 20px; line-height: 1; color: var(--muted); cursor: pointer; border-radius: 3px; }
+.install-tip-close:hover { background: var(--bg); color: var(--ink); }
+/* Installed app: respect the notch/status bar */
+@media (display-mode: standalone) { .util { padding-top: env(safe-area-inset-top); } }
 .util { background: var(--navy); color: #c9d4e3; font-size: 12.5px; }
 .util .container { display: flex; justify-content: space-between; gap: 12px; padding-top: 7px; padding-bottom: 7px; }
 .util-updated { display: inline-flex; align-items: center; gap: 6px; color: #fff; font-weight: 500; }
@@ -292,8 +312,16 @@ footer a:hover { text-decoration-color: #fff; }
 
 <div class="util"><div class="container">
   <span>Conference directory for academic library and higher-education professionals</span>
+  <span class="util-right">
+  <button class="install-btn" id="install-btn" type="button" hidden><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>Install app</button>
   <span class="util-updated"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path stroke-linecap="round" d="M16 2.5v4M8 2.5v4M3 9.5h18"/></svg>Last updated October 22, 2026</span>
+  </span>
 </div></div>
+<div class="install-tip" id="install-tip" role="dialog" aria-labelledby="install-tip-title" hidden>
+  <p class="install-tip-title" id="install-tip-title">Add to your home screen</p>
+  <p id="install-tip-text"></p>
+  <button type="button" class="install-tip-close" onclick="document.getElementById('install-tip').hidden = true" aria-label="Close">×</button>
+</div>
 
 <header class="mast"><div class="container">
   <span class="shield" aria-hidden="true">PD</span>
@@ -2987,6 +3015,42 @@ document.getElementById('sort').addEventListener('change', e => { state.sort = e
 updateHeaderStats();
 renderClosingSoon();
 render();
+
+// ── Install as an app ──
+// Chrome, Edge and Android fire beforeinstallprompt; Safari doesn't, so there
+// the button shows the steps instead. Hidden once installed, and in browsers
+// that can't install (e.g. Firefox on desktop).
+(function () {
+  const btn = document.getElementById('install-btn'), tip = document.getElementById('install-tip'), text = document.getElementById('install-tip-text');
+  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  if (standalone) return;
+  const ua = navigator.userAgent;
+  const iOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  const macSafari = !iOS && /Macintosh/.test(ua) && /Safari/.test(ua) && !/Chrome|Chromium|Edg|Firefox/.test(ua);
+  let deferred = null;
+  addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; btn.hidden = false; });
+  addEventListener('appinstalled', () => { btn.hidden = true; tip.hidden = true; deferred = null; });
+  if (iOS) {
+    btn.hidden = false;
+    text.innerHTML = /CriOS|FxiOS|EdgiOS/.test(ua)
+      ? 'Tap the <b>Share</b> button in the address bar, then <b>Add to Home Screen</b>.'
+      : 'Tap the <b>Share</b> button <span aria-hidden="true">(square with an arrow)</span> at the bottom of Safari, then <b>Add to Home Screen</b>.';
+  } else if (macSafari) {
+    btn.hidden = false;
+    text.innerHTML = 'In Safari, choose <b>File › Add to Dock</b>. The directory then opens in its own window.';
+  }
+  btn.addEventListener('click', async () => {
+    if (deferred) {
+      deferred.prompt();
+      const choice = await deferred.userChoice.catch(() => null);
+      if (choice && choice.outcome === 'accepted') btn.hidden = true;
+      deferred = null;
+      return;
+    }
+    tip.hidden = !tip.hidden;
+  });
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('/sw.js').catch(() => {});
+})();
 
 // ── Hero globe ──
 // Hero globe: upcoming in-person and hybrid conferences on a slowly turning
