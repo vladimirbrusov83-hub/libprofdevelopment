@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Professional Development for Academic Libraries</title>
 <meta name="description" content="A filterable directory of conferences and professional development for academic library and higher-education workers, with every event rated for its AI content. Compiled by Yulia Brusova.">
 <meta name="google-site-verification" content="2I08HilU8m23DiIAiGXFIJCc1FZIwbNxbpssA9y1ERg">
@@ -230,6 +230,17 @@ footer a { color: #fff; text-decoration: underline; text-decoration-color: rgba(
 footer a:hover { text-decoration-color: #fff; }
 .foot-fine p + p { margin-top: 8px; }
 .foot-also { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.14); max-width: 34em; }
+
+/* ── Bottom tab bar: installed app on a phone (or ?app=1 to preview) ── */
+.tabbar { display: none; }
+html.app .tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 18px -12px rgba(11,37,69,.35); padding-bottom: env(safe-area-inset-bottom); }
+html.app body { padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
+.tab { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 58px; background: none; border: 0; font: inherit; font-size: 11.5px; font-weight: 600; color: var(--muted); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.tab svg { width: 22px; height: 22px; }
+.tab[aria-current="true"] { color: var(--navy); }
+.tab[aria-current="true"]::before { content: ""; position: absolute; top: 0; left: 28%; right: 28%; height: 3px; background: var(--gold); border-radius: 0 0 3px 3px; }
+.tab .tab-badge { position: absolute; top: 7px; left: calc(50% + 6px); min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; background: var(--red); color: #fff; font-size: 10.5px; line-height: 17px; text-align: center; }
+.tab .tab-badge:empty { display: none; }
 
 /* ── Responsive ── */
 @media (max-width: 1000px) {
@@ -505,6 +516,12 @@ footer a:hover { text-decoration-color: #fff; }
     <p>Last updated October 22, 2026 · Compiled by Yulia Brusova · © 2026 Iuliia Brusova. <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a></p>
   </div>
 </div></footer>
+<nav class="tabbar" aria-label="App menu">
+  <button class="tab" type="button" data-tab="home" aria-current="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h5v-6h4v6h5V9.5"/></svg>Home</button>
+  <button class="tab" type="button" data-tab="deadlines"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>Deadlines<span class="tab-badge" id="tab-dl-badge"></span></button>
+  <button class="tab" type="button" data-tab="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search</button>
+  <button class="tab" type="button" data-tab="filters"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Filters<span class="tab-badge" id="tab-f-badge"></span></button>
+</nav>
 
 <script>
 const CONFERENCES = [
@@ -3182,6 +3199,41 @@ document.getElementById('sort').addEventListener('change', e => { state.sort = e
 updateHeaderStats();
 renderClosingSoon();
 render();
+
+// Bottom tab bar for the installed app on a phone. ?app=1 previews it in a browser.
+(function () {
+  const installed = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  const phone = matchMedia('(max-width: 860px)');
+  const preview = /[?&]app=1\b/.test(location.search);
+  const sync = () => document.documentElement.classList.toggle('app', (installed || preview) && phone.matches);
+  sync(); phone.addEventListener('change', sync);
+  const tabs = [...document.querySelectorAll('.tab')];
+  const mark = name => tabs.forEach(t => t.setAttribute('aria-current', String(t.dataset.tab === name)));
+  const to = el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 12, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  const panel = document.getElementById('panel');
+  const act = {
+    home() { window.scrollTo({ top: 0, behavior: 'smooth' }); },
+    deadlines() {
+      const soon = document.getElementById('soon');
+      if (soon.hidden) { document.getElementById('sort').value = 'deadline'; document.getElementById('sort').dispatchEvent(new Event('change')); return to(document.getElementById('results')); }
+      soon.classList.add('open'); document.getElementById('soon-more').hidden = true; to(soon);
+    },
+    search() { const q = document.getElementById('conf-search'); to(panel); q.focus({ preventScroll: true }); },
+    filters() { if (!panel.classList.contains('open')) togglePanel(); to(panel); }
+  };
+  tabs.forEach(t => t.addEventListener('click', () => { mark(t.dataset.tab); act[t.dataset.tab](); }));
+  // Back at the top = Home again.
+  addEventListener('scroll', () => { if (scrollY < 40) mark('home'); }, { passive: true });
+  // Badges mirror the page: deadlines in 30 days, active filters.
+  const copy = () => {
+    document.getElementById('tab-dl-badge').textContent = (document.getElementById('deadline-count').textContent.match(/\d+/) || [''])[0];
+    document.getElementById('tab-f-badge').textContent = (document.getElementById('filter-badge').textContent.match(/\d+/) || [''])[0];
+  };
+  copy();
+  new MutationObserver(copy).observe(document.getElementById('filter-badge'), { childList: true, characterData: true, subtree: true });
+  new MutationObserver(copy).observe(document.getElementById('deadline-count'), { childList: true, characterData: true, subtree: true });
+})();
+
 
 // ── Install as an app ──
 // Chrome, Edge and Android fire beforeinstallprompt; Safari doesn't, so there

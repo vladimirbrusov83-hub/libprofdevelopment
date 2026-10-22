@@ -1,7 +1,7 @@
 // Offline support for the installed app. Network first, so the directory is
 // always as fresh as the live site when online; the last copy that loaded is
 // used when there's no connection (handy on conference Wi-Fi).
-const CACHE = "pd-v1";
+const CACHE = "pd-v2";
 const CORE = ["/", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/favicon-32.png"];
 
 self.addEventListener("install", e => {
