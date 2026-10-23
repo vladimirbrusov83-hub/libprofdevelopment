@@ -54,8 +54,11 @@ function generate({ quiet = false } = {}) {
             "@type": "Event", "name": c.name, "startDate": c.dateSort, ...(c.dateEnd ? { "endDate": c.dateEnd } : {}),
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": MODE[c.format] || MODE.inperson,
-            "description": c.description, "url": c.url,
-            "organizer": { "@type": "Organization", "name": c.organizer },
+            "description": c.description, "url": c.url, "image": SITE + "/og-image.png",
+            // No prices or speaker lists are kept, so the offer only points to the
+            // organizer's page and "performer" is left out rather than guessed.
+            "offers": { "@type": "Offer", "url": c.url },
+            "organizer": { "@type": "Organization", "name": c.organizer, "url": new URL(c.url).origin },
             "location": c.format === "virtual" ? { "@type": "VirtualLocation", "url": c.url } : { "@type": "Place", "name": c.location, "address": c.location }
           }
         })) }
