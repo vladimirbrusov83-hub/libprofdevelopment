@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-51-2026-10-22@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261025
+SUMMARY:CLA Conference 2026 (California Library Association)
+LOCATION:Riverside\, CA (Riverside Convention Center)
+DESCRIPTION:California Library Association · https://www.cla-conference.org/
+URL:https://www.cla-conference.org/
+END:VEVENT
+END:VCALENDAR

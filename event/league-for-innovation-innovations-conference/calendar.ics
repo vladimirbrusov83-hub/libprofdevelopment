@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-93-2027-03-14@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270317
+SUMMARY:League for Innovation — Innovations Conference
+LOCATION:Chandler\, AZ (Gila River Resorts & Casinos – Wild Horse Pass)
+DESCRIPTION:League for Innovation · https://www.league.org/inn2027
+URL:https://www.league.org/inn2027
+END:VEVENT
+END:VCALENDAR

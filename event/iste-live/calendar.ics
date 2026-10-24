@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-37-2027-06-27@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270627
+DTEND;VALUE=DATE:20270701
+SUMMARY:ISTE 2027 — ISTELive 27
+LOCATION:Boston\, MA
+DESCRIPTION:International Society for Technology in Education (ISTE) · https://conference.iste.org/
+URL:https://conference.iste.org/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-17-2026-12-10@libprofdevelopment
+DTSTAMP:20261210T000000Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261212
+SUMMARY:CNI Fall 2026 Membership Meeting
+LOCATION:Washington\, DC
+DESCRIPTION:Coalition for Networked Information (CNI) · https://www.cni.org/event/fall-2026-membership-meeting
+URL:https://www.cni.org/event/fall-2026-membership-meeting
+END:VEVENT
+END:VCALENDAR

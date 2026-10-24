@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-137-2026-07-10@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20270101
+SUMMARY:CENL Network Group AI in Libraries Webinars 2026
+LOCATION:Virtual
+DESCRIPTION:Conference of European National Librarians · https://www.cenl.org/network-group-ai-in-libraries-webinars-2026/
+URL:https://www.cenl.org/network-group-ai-in-libraries-webinars-2026/
+END:VEVENT
+END:VCALENDAR

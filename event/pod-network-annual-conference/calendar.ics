@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-42-2026-11-18@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261121
+SUMMARY:POD Network 51st Annual Conference 2026
+LOCATION:Baltimore\, MD
+DESCRIPTION:POD Network (Professional & Organizational Development) · https://podnetwork.org/annual-conference/baltimore-2026/
+URL:https://podnetwork.org/annual-conference/baltimore-2026/
+END:VEVENT
+END:VCALENDAR

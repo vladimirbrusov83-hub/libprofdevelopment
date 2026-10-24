@@ -19,7 +19,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { parse, validate, write, isHidden } = require("./conf-lib");
+const { parse, validate, write, isHidden, assignSlugs } = require("./conf-lib");
 const { sourcesFor, pruneSources } = require("./conf-pages");
 
 const STATE = path.join(__dirname, "conf-state.json");
@@ -116,6 +116,7 @@ const final = list.filter(c => !dropped.has(c.id));
 // Every run, hand edits included: a source must still back what the card shows.
 final.forEach(pruneSources);
 
+assignSlugs(final); // new entries need their page address before validation
 const errs = validate(final);
 if (errs.length) { console.error("validation failed — nothing written:\n  " + errs.join("\n  ")); process.exit(1); }
 

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-134-2027-05-11@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270511
+DTEND;VALUE=DATE:20270515
+SUMMARY:Florida Library Association 2027 Annual Conference
+LOCATION:Orlando\, FL\, United States
+DESCRIPTION:Florida Library Association · https://www.flalib.org/save-date-2027-2029-annual-conferences
+URL:https://www.flalib.org/save-date-2027-2029-annual-conferences
+END:VEVENT
+END:VCALENDAR

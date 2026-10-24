@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-145-2027-07-19@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270719
+DTEND;VALUE=DATE:20270723
+SUMMARY:IEEE International Conference on Advanced Learning Technologies (ICALT) 2027
+LOCATION:Dortmund\, Germany
+DESCRIPTION:IEEE Technical Committee on Learning Technology · https://tc.computer.org/tclt/icalt-2027/
+URL:https://tc.computer.org/tclt/icalt-2027/
+END:VEVENT
+END:VCALENDAR

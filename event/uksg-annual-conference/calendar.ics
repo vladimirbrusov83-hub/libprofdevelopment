@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-128-2027-04-05@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270408
+SUMMARY:UKSG Annual Conference 2027 (50th)
+LOCATION:Glasgow\, UK
+DESCRIPTION:UKSG · https://www.uksg.org/events/conference27/
+URL:https://www.uksg.org/events/conference27/
+END:VEVENT
+END:VCALENDAR

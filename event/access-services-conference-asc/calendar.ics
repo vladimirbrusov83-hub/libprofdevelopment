@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-110-2026-11-17@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261120
+SUMMARY:Access Services Conference (ASC) 2026
+LOCATION:Atlanta\, GA (Georgia Tech Global Learning Center + livestream)
+DESCRIPTION:Access Services in Libraries\, Inc. (ASiL) · https://www.accessservicesconference.org/conferences/2026-conference/
+URL:https://www.accessservicesconference.org/conferences/2026-conference/
+END:VEVENT
+END:VCALENDAR

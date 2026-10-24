@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-1-2027-06-07@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270607
+DTEND;VALUE=DATE:20270611
+SUMMARY:GAIL 2027 — Generative AI in Libraries Virtual Conference
+LOCATION:Virtual (Zoom Events)
+DESCRIPTION:Sam Houston State University Libraries & Virginia Tech TELOS · https://shsulibraryguides.org/genailibraries
+URL:https://shsulibraryguides.org/genailibraries
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-122-2027-06-28@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270628
+DTEND;VALUE=DATE:20270703
+SUMMARY:EAHIL Conference 2027
+LOCATION:Groningen\, Netherlands (UMCG)
+DESCRIPTION:European Association for Health Information and Libraries · https://eahil.eu/
+URL:https://eahil.eu/
+END:VEVENT
+END:VCALENDAR

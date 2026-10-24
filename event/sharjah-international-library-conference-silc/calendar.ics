@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-108-2026-11-07@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261110
+SUMMARY:Sharjah International Library Conference (SILC) 2026
+LOCATION:Sharjah\, UAE
+DESCRIPTION:Sharjah Book Authority + ALA · https://sharjahilc.com/
+URL:https://sharjahilc.com/
+END:VEVENT
+END:VCALENDAR

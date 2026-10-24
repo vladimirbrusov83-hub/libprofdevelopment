@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-71-2026-11-09@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261111
+SUMMARY:AI-cademy 2026
+LOCATION:Vancouver\, Canada (UBC)
+DESCRIPTION:Higher Education Strategy Associates (HESA) + University of British Columbia · https://higheredstrategy.com/
+URL:https://higheredstrategy.com/
+END:VEVENT
+END:VCALENDAR

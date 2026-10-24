@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-109-2026-11-15@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261120
+SUMMARY:IATUL Conference 2026 (46th)
+LOCATION:Johannesburg\, South Africa (first time in Africa)
+DESCRIPTION:International Association of University Libraries · https://www.iatul.org/
+URL:https://www.iatul.org/
+END:VEVENT
+END:VCALENDAR

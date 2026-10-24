@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-45-2027-06-01@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270605
+SUMMARY:AIR Forum 2027
+LOCATION:Denver\, CO (Colorado Convention Center)
+DESCRIPTION:Association for Institutional Research (AIR) · https://www.airweb.org/forum/2027/home
+URL:https://www.airweb.org/forum/2027/home
+END:VEVENT
+END:VCALENDAR

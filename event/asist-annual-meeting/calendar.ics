@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-73-2026-11-06@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261112
+SUMMARY:ASIS&T Annual Meeting 2026
+LOCATION:Bangkok\, Thailand + Virtual
+DESCRIPTION:Association for Information Science and Technology (merged with SLA in 2025) · https://www.asist.org/am26/
+URL:https://www.asist.org/am26/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Professional Development for Academic Libraries//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:conf-113-2027-04-19@libprofdevelopment
+DTSTAMP:20261022T000000Z
+DTSTART;VALUE=DATE:20270419
+DTEND;VALUE=DATE:20270423
+SUMMARY:TLA Annual Conference 2027
+LOCATION:San Antonio\, TX (Henry B. González Convention Center)
+DESCRIPTION:Texas Library Association · https://conference.txla.org/
+URL:https://conference.txla.org/
+END:VEVENT
+END:VCALENDAR

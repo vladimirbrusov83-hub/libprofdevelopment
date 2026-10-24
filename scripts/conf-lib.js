@@ -12,7 +12,7 @@ const HTML = process.env.CONF_HTML || path.join(__dirname, "..", "index.html");
 
 // Canonical key order — matches how the array is already written by hand.
 const KEYS = [
-  "id", "name", "organizer", "dates", "dateSort", "dateEnd", "location",
+  "id", "slug", "name", "organizer", "dates", "dateSort", "dateEnd", "location",
   "format", "url", "urlVerified", "urlNote", "category", "aiFocus",
   "international", "description", "deadline", "deadlines", "checked", "sources"
 ];
@@ -90,6 +90,10 @@ function validate(list) {
       }
     }
     // `checked` = the day a refresh last loaded the organizer's site and confirmed the entry.
+    // `slug` = the conference's permanent page address (/event/<slug>/). Set once,
+    // never recomputed from a renamed entry, so the page keeps its search ranking;
+    // editions of one series share it.
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(c.slug || "")) errs.push(`${at}: bad slug ${c.slug}`);
     if (c.checked !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(c.checked)) errs.push(`${at}: bad checked ${c.checked}`);
     // `sources` = verbatim lines from the organizer's site behind the dates and
     // deadlines ({ about: "dates"|"deadline", date, quote, url, seen }), shown on the card.
@@ -108,10 +112,17 @@ function validate(list) {
       errs.push(`${at}: name says ${yrs.join("/")} but dateSort is ${c.dateSort} — update the name too`);
     }
   }
+  const bySlug = new Map();
+  for (const c of list) {
+    const o = bySlug.get(c.slug);
+    if (o && seriesKey(o.name) !== seriesKey(c.name)) errs.push(`#${c.id} ${c.name}: slug ${c.slug} already belongs to #${o.id} ${o.name}`);
+    else if (!o) bySlug.set(c.slug, c);
+  }
   return errs;
 }
 
 function write(list, { footerDate } = {}) {
+  assignSlugs(list);
   const errs = validate(list);
   if (errs.length) {
     throw new Error("Refusing to write — validation failed:\n  " + errs.join("\n  "));
@@ -146,6 +157,34 @@ function seriesKey(name) {
     .trim();
 }
 
+// Readable URL part from a name: no year, edition ordinal or "(Announced)",
+// accents folded, at most 60 characters on a word boundary.
+function slugify(name) {
+  const s = name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/ß/g, "ss")
+    .replace(/\((announced|\d+(st|nd|rd|th))\)/gi, " ").replace(/20\d\d/g, " ")
+    .replace(/\b\d+\s*(st|nd|rd|th|e|er)\b|\d+°/gi, " ")
+    .replace(/(\w)&(\w)/g, "$1$2").replace(/&/g, " and ").replace(/'/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  let out = "";
+  for (const w of s.split("-")) { if ((out + "-" + w).length > 60) break; out = out ? out + "-" + w : w; }
+  return out || "conference";
+}
+
+// New entries get a slug: an edition of a series already listed shares its page;
+// otherwise a fresh one, suffixed if another series already holds it.
+function assignSlugs(list) {
+  for (const c of list) {
+    if (c.slug) continue;
+    const sibling = list.find(x => x.slug && seriesKey(x.name) === seriesKey(c.name));
+    if (sibling) { c.slug = sibling.slug; continue; }
+    const base = slugify(c.name);
+    let slug = base, n = 2;
+    while (list.some(x => x.slug === slug)) slug = `${base}-${n++}`;
+    c.slug = slug;
+  }
+  return list;
+}
+
 // For each stale entry, the earliest later-dated edition of the same series
 // already present in the list, or undefined.
 function supersessions(list, today = new Date().toISOString().slice(0, 10)) {
@@ -166,4 +205,4 @@ function supersessions(list, today = new Date().toISOString().slice(0, 10)) {
   return map;
 }
 
-module.exports = { HTML, KEYS, parse, serialize, validate, write, isPast, isHidden, readHtml, seriesKey, supersessions };
+module.exports = { HTML, KEYS, parse, serialize, validate, write, isPast, isHidden, readHtml, seriesKey, supersessions, slugify, assignSlugs };
